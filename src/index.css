@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.05;
+    background-color: transparent;
+    filter: url(#organicNoise);
+  }
+}
+
+@layer components {
+  /* Magnetic Button - Organic Tech Style */
+  .btn-magnetic {
+    @apply relative overflow-hidden inline-flex items-center justify-center 
+           px-8 py-4 rounded-[3rem] font-sans font-medium text-sm transition-all duration-500
+           hover:scale-[1.03] active:scale-[0.98] transform;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .btn-magnetic > span {
+    @apply relative z-10;
+  }
+
+  .btn-magnetic::before {
+    content: '';
+    @apply absolute inset-0 rounded-[3rem] transition-transform duration-500 origin-bottom scale-y-0 z-0;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .btn-magnetic:hover::before {
+    @apply scale-y-100;
+  }
+
+  /* Moss Variant (Primary) */
+  .btn-moss {
+    @apply bg-moss text-cream border border-moss;
+  }
+  .btn-moss::before {
+    @apply bg-charcoal;
+  }
+
+  /* Clay Variant (Accent) */
+  .btn-clay {
+    @apply bg-clay text-cream border border-clay;
+  }
+  .btn-clay::before {
+    @apply bg-moss;
+  }
+
+  /* Cream Variant (Ghost/Outline) */
+  .btn-cream {
+    @apply bg-cream text-moss border border-moss/20 hover:border-moss/0;
+  }
+  .btn-cream::before {
+    @apply bg-moss;
+  }
+  .btn-cream:hover > span {
+    @apply text-cream;
+  }
+}
+
+/* Custom Scrollbar for Organic Tech */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cream;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-moss/20 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-moss/50;
+}
