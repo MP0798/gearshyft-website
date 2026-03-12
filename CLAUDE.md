@@ -15,6 +15,8 @@ npm run lint      # ESLint
 ## Project Structuur
 
 ```
+api/
+└── contact.js               # Vercel serverless function (Resend email)
 src/
 ├── App.jsx                  # Router setup (BrowserRouter + Routes)
 ├── App.css                  # App-specifieke stijlen (leeg, Tailwind handles alles via index.css)
@@ -42,7 +44,7 @@ src/
 │   ├── BlogIndexPage.jsx    # Blog overzicht met post listing
 │   ├── BlogPostPage.jsx     # Blog detail pagina met JSON-LD schema
 │   ├── WerkwijzePage.jsx    # Werkwijze/aanpak stappen
-│   ├── ContactPage.jsx      # Contactformulier + email
+│   ├── ContactPage.jsx      # Contactformulier (Resend) + Calendly + email
 │   ├── PrivacyPage.jsx      # Privacyverklaring (was modal, nu pagina)
 │   └── FaqPage.jsx          # Veelgestelde vragen met accordion
 └── remotion/                # Remotion animaties (Protocol sectie)
@@ -60,6 +62,8 @@ src/
 - **Tailwind CSS 3** met custom design tokens
 - **GSAP 3** + ScrollTrigger (scroll-animaties, parallax, sticky cards)
 - **Remotion 4** + @remotion/player (SVG animaties in browser)
+- **Resend** (transactional email via Vercel serverless function)
+- **Calendly** (popup widget voor kennismaking inplannen)
 - **Lucide React** (icons)
 - **React Router 7** (react-router-dom) voor client-side routing
 - **i18n** via custom React Context (`src/i18n.jsx`), geen library
@@ -160,7 +164,11 @@ Elke dienst detail pagina heeft een case-sectie met een echt projectvoorbeeld (c
 **HomePage secties:** Hero → Features → CTA → Philosophy → Protocol → CTA
 
 ### Contact & Formulier
-- Contactformulier via Formsubmit.co op `/contact` pagina
+- Contactformulier via Vercel serverless function (`api/contact.js`) + Resend API
+- Formulier POST naar `/api/contact`, stuurt email naar max@gearshyft.nl
+- Autoresponder: bevestigingsmail naar bezoeker ("binnen een werkdag")
+- `RESEND_API_KEY` environment variable in Vercel (niet in code)
+- Calendly popup widget voor kennismaking inplannen (30min, maxpoppes)
 - Email: `mailto:max@gearshyft.nl`
 - Social links: Twitter/X en LinkedIn (TODO: echte URLs)
 - Privacy is nu een aparte pagina (`/privacy`), geen modal meer
@@ -184,8 +192,9 @@ Elke dienst detail pagina heeft een case-sectie met een echt projectvoorbeeld (c
 - **Platform:** Vercel
 - **Build:** `npm run build` → `dist/`
 - **GitHub:** https://github.com/MP0798/gearshyft-website.git
-- Pure static SPA, geen backend nodig
-- `vercel.json` met SPA rewrite (alle routes → `index.html`)
+- Vercel serverless function voor contactformulier (`api/contact.js`)
+- `vercel.json` met API route + SPA rewrite fallback
+- Environment variable: `RESEND_API_KEY` (in Vercel dashboard)
 
 ---
 
