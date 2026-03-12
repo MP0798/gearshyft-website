@@ -1,7 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useTranslation, useLocalizedPath } from '../i18n';
 import MagneticBtn from '../components/MagneticBtn';
+
+const FaqSchema = ({ items }) => {
+  useEffect(() => {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: items.map(item => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a,
+        },
+      })),
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    script.id = 'faq-schema';
+    document.head.appendChild(script);
+    return () => {
+      const el = document.getElementById('faq-schema');
+      if (el) el.remove();
+    };
+  }, [items]);
+  return null;
+};
 
 const FaqItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false);
@@ -33,6 +60,7 @@ const FaqPage = () => {
 
   return (
     <>
+      <FaqSchema items={t.faqItems} />
       {/* Hero */}
       <section className="min-h-[40vh] bg-charcoal flex items-center px-6 md:px-16 lg:px-24 pt-32 pb-20">
         <div className="max-w-4xl">

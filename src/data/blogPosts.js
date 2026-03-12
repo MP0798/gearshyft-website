@@ -11,7 +11,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-02-10',
-    readTime: 6,
+    readTime: 2,
     category: 'procesverbetering',
     nl: {
       title: 'Heb je AI nodig, of gewoon een beter proces?',
@@ -58,7 +58,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-02-24',
-    readTime: 5,
+    readTime: 2,
     category: 'procesverbetering',
     nl: {
       title: 'Procesverbetering zonder Lean of Six Sigma',
@@ -105,7 +105,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-03-03',
-    readTime: 5,
+    readTime: 2,
     category: 'procesverbetering',
     nl: {
       title: '5 signalen dat je bedrijfsproces toe is aan verbetering',
@@ -152,7 +152,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-03-10',
-    readTime: 7,
+    readTime: 2,
     category: 'digitalisering',
     nl: {
       title: 'Waarom digitalisering mislukt bij MKB bedrijven',

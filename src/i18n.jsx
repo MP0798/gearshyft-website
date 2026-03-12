@@ -201,7 +201,7 @@ const translations = {
     privacySectionWhy: 'Why do we collect this data?',
     privacySectionWhyText: 'Solely to respond to your inquiry. We do not use your data for marketing, profiling, or any other purpose.',
     privacySectionCookies: 'Cookies and tracking',
-    privacySectionCookiesText: 'This website does not use cookies or tracking technologies. We do not use analytics tools that track your behavior.',
+    privacySectionCookiesText: 'This website uses Google Analytics (GA4) to understand how visitors use our site. GA4 collects anonymized usage data and may place cookies. We do not use this data for marketing or profiling. You can opt out via your browser settings or a plugin like Google Analytics Opt-out.',
     privacySectionSharing: 'Sharing with third parties',
     privacySectionSharingText: 'We do not sell or share your personal data with third parties, except where necessary to process your contact form submission (e.g., our form provider).',
     privacySectionRights: 'Your rights (GDPR)',
@@ -222,6 +222,7 @@ const translations = {
     aboutGearDesc: 'In a higher gear, you get more out of the same RPM. Less effort, more output. That\'s GearShyft.',
 
     // About Max
+    maxPhotoAlt: 'Max Poppes - Founder of GearShyft',
     aboutMaxLabel: 'The person behind GearShyft',
     aboutMaxName: 'Max Poppes',
     aboutMaxRole: 'Founder',
@@ -506,7 +507,7 @@ const translations = {
     privacySectionWhy: 'Waarom verzamelen we deze gegevens?',
     privacySectionWhyText: 'Uitsluitend om te reageren op je vraag. We gebruiken je gegevens niet voor marketing, profilering of andere doeleinden.',
     privacySectionCookies: 'Cookies en tracking',
-    privacySectionCookiesText: 'Deze website gebruikt geen cookies of trackingtechnologieen. We gebruiken geen analysetools die je gedrag volgen.',
+    privacySectionCookiesText: 'Deze website gebruikt Google Analytics (GA4) om te begrijpen hoe bezoekers de site gebruiken. GA4 verzamelt geanonimiseerde gebruiksgegevens en kan cookies plaatsen. We gebruiken deze data niet voor marketing of profilering. Je kunt je afmelden via je browserinstellingen of een plugin zoals Google Analytics Opt-out.',
     privacySectionSharing: 'Delen met derden',
     privacySectionSharingText: 'We verkopen of delen je persoonsgegevens niet met derden, behalve waar nodig voor de verwerking van je contactformulier (bijv. onze formulierenprovider).',
     privacySectionRights: 'Je rechten (AVG)',
@@ -527,6 +528,7 @@ const translations = {
     aboutGearDesc: 'In een hogere versnelling haal je meer uit dezelfde toeren. Minder moeite, meer resultaat. Dat is GearShyft.',
 
     // About Max
+    maxPhotoAlt: 'Max Poppes - Oprichter GearShyft',
     aboutMaxLabel: 'De persoon achter GearShyft',
     aboutMaxName: 'Max Poppes',
     aboutMaxRole: 'Oprichter',

@@ -1,0 +1,35 @@
+# GearShyft
+
+> Practical process improvement for growing businesses. We build workflows, tools, and systems that fit how your team actually works.
+
+## About
+
+GearShyft helps companies with 10-200 employees improve their operational processes. Founded by Max Poppes, based in the Netherlands. We work throughout the Benelux region.
+
+Our approach: process first, technology second. We build and implement, we don't just advise.
+
+## Services
+
+- **Work Process Improvement** (Werkprocessen Verbeteren): Analyze and streamline operational workflows to reduce friction and wasted time.
+- **Tools & Systems** (Tools & Systemen Bouwen): Build practical digital tools and systems tailored to your team's actual way of working.
+- **Data Management** (Data op Orde Brengen): Organize scattered data, eliminate duplicate sources of truth, and create clear data flows.
+
+## Approach
+
+1. Operational analysis: understand the current process and identify bottlenecks
+2. Design a practical solution (could be a simpler workflow, a tool, or automation)
+3. Build and implement together with the team that does the work
+4. Short, focused engagements (4-12 weeks) with fixed project fees
+
+## Contact
+
+- Website: https://gearshyft.nl
+- Email: max@gearshyft.nl
+- Location: Netherlands (Benelux)
+
+## Content
+
+- Blog: https://gearshyft.nl/blog (process improvement insights)
+- Services: https://gearshyft.nl/diensten
+- About: https://gearshyft.nl/over
+- FAQ: https://gearshyft.nl/faq

@@ -102,11 +102,16 @@ const AboutMax = () => {
         {/* Photo */}
         <div className="max-photo flex justify-center md:justify-start">
           <div className="w-72 h-80 md:w-80 md:h-96 rounded-[2.5rem] overflow-hidden">
-            <img
-              src="/images/max-poppes.png"
-              alt="Max Poppes - Oprichter GearShyft"
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcSet="/images/max-poppes.webp" type="image/webp" />
+              <img
+                src="/images/max-poppes.png"
+                alt={t.maxPhotoAlt}
+                width={320}
+                height={384}
+                className="w-full h-full object-cover"
+              />
+            </picture>
           </div>
         </div>
 
