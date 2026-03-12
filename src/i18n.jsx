@@ -103,8 +103,14 @@ const translations = {
     contactMessageLabel: 'Message',
     contactMessagePlaceholder: 'What process or challenge are you dealing with?',
     contactSubmit: 'Send Message',
+    contactSending: 'Sending...',
+    contactSuccessTitle: 'Message sent!',
+    contactSuccessText: 'We\'ll get back to you as soon as possible.',
+    contactError: 'Something went wrong. Try again or email us directly.',
     contactOrEmail: 'Rather just email?',
     contactDirectEmail: 'Send us a direct email',
+    contactOrCall: 'Rather talk it through?',
+    contactCalendly: 'Schedule an introduction',
 
     // CTA Banners
     ctaBanner1Text: 'Curious what we could improve for you?',
@@ -315,8 +321,14 @@ const translations = {
     contactMessageLabel: 'Bericht',
     contactMessagePlaceholder: 'Met welk proces of uitdaging zitten jullie?',
     contactSubmit: 'Verstuur Bericht',
+    contactSending: 'Versturen...',
+    contactSuccessTitle: 'Bericht verstuurd!',
+    contactSuccessText: 'We nemen zo snel mogelijk contact met je op.',
+    contactError: 'Er ging iets mis. Probeer het opnieuw of mail ons direct.',
     contactOrEmail: 'Liever direct mailen?',
     contactDirectEmail: 'Stuur ons een e-mail',
+    contactOrCall: 'Liever even sparren?',
+    contactCalendly: 'Plan een kennismaking',
 
     // CTA Banners
     ctaBanner1Text: 'Benieuwd wat we voor jullie kunnen verbeteren?',

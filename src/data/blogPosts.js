@@ -9,8 +9,8 @@ const blogPosts = [
       nl: 'ai-nodig-of-beter-proces',
       en: 'ai-need-or-better-process',
     },
-    author: 'Max Pijnenburg',
-    publishedDate: '2026-04-15',
+    author: 'Max Poppes',
+    publishedDate: '2026-02-10',
     readTime: 6,
     category: 'procesverbetering',
     nl: {
@@ -56,8 +56,8 @@ const blogPosts = [
       nl: 'procesverbetering-zonder-lean',
       en: 'process-improvement-without-lean',
     },
-    author: 'Max Pijnenburg',
-    publishedDate: '2026-05-01',
+    author: 'Max Poppes',
+    publishedDate: '2026-02-24',
     readTime: 5,
     category: 'procesverbetering',
     nl: {
@@ -103,8 +103,8 @@ const blogPosts = [
       nl: 'signalen-proces-verbeteren',
       en: 'signs-your-process-needs-fixing',
     },
-    author: 'Max Pijnenburg',
-    publishedDate: '2026-05-15',
+    author: 'Max Poppes',
+    publishedDate: '2026-03-03',
     readTime: 5,
     category: 'procesverbetering',
     nl: {
@@ -150,8 +150,8 @@ const blogPosts = [
       nl: 'digitalisering-mislukt-mkb',
       en: 'why-digitalization-fails-sme',
     },
-    author: 'Max Pijnenburg',
-    publishedDate: '2026-06-01',
+    author: 'Max Poppes',
+    publishedDate: '2026-03-10',
     readTime: 7,
     category: 'digitalisering',
     nl: {

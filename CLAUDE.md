@@ -32,11 +32,15 @@ src/
 │   └── ScrollToTop.jsx      # Scroll naar top bij route navigatie
 ├── hooks/                   # Custom React hooks
 │   └── usePageMeta.js       # Per-page SEO meta tags (title, desc, canonical, hreflang, OG)
+├── data/                    # Content data (gescheiden van UI translations)
+│   └── blogPosts.js         # Blog posts NL/EN met metadata + helpers
 ├── pages/                   # Pagina componenten (1 per route)
 │   ├── HomePage.jsx         # Hero + Features + Philosophy + Protocol + CTAs
 │   ├── OverPage.jsx         # Over GearShyft + missie + waarden
 │   ├── DienstenPage.jsx     # Diensten overzicht (links naar sub-services)
 │   ├── ServiceDetailPage.jsx # Herbruikbaar component voor dienst detail pagina's (:slug)
+│   ├── BlogIndexPage.jsx    # Blog overzicht met post listing
+│   ├── BlogPostPage.jsx     # Blog detail pagina met JSON-LD schema
 │   ├── WerkwijzePage.jsx    # Werkwijze/aanpak stappen
 │   ├── ContactPage.jsx      # Contactformulier + email
 │   ├── PrivacyPage.jsx      # Privacyverklaring (was modal, nu pagina)
@@ -139,6 +143,8 @@ Componenten in `src/components/`, pagina's in `src/pages/`.
 | `/contact` | `/en/contact` | ContactPage |
 | `/privacy` | `/en/privacy` | PrivacyPage |
 | `/faq` | `/en/faq` | FaqPage |
+| `/blog` | `/en/blog` | BlogIndexPage |
+| `/blog/:slug` | `/en/blog/:slug` | BlogPostPage |
 
 **Diensten sub-pagina's (via :slug param):**
 | NL slug | EN slug | Dienst |
@@ -159,13 +165,19 @@ Elke dienst detail pagina heeft een case-sectie met een echt projectvoorbeeld (c
 - Social links: Twitter/X en LinkedIn (TODO: echte URLs)
 - Privacy is nu een aparte pagina (`/privacy`), geen modal meer
 
+### Blog
+- Blog content in `src/data/blogPosts.js` (gescheiden van i18n UI-translations)
+- Elke post heeft NL + EN versie met slug mapping, metadata, en content sections
+- `getBlogPosts(lang)` voor listing, `getBlogPostBySlug(slug, lang)` voor detail
+- BlogPostPage injecteert dynamisch BlogPosting JSON-LD schema
+- Blog post toevoegen: voeg object toe aan array in `blogPosts.js`, update sitemap
+
 ### SEO & Meta
 - Per-page meta tags via `usePageMeta` hook in Layout (title, description, canonical, hreflang, OG, Twitter)
 - Meta config per route in `src/hooks/usePageMeta.js` (niet in i18n)
 - `index.html`: statische fallback meta voor crawlers zonder JS
-- JSON-LD structured data (ProfessionalService + WebSite schema)
-- `public/robots.txt` + `public/sitemap.xml` (22 URLs met xhtml:link hreflang)
-- TODO: favicon vervangen (nog vite.svg), og:image toevoegen
+- JSON-LD structured data (ProfessionalService + WebSite + BlogPosting schema)
+- `public/robots.txt` + `public/sitemap.xml` (32 URLs met xhtml:link hreflang)
 
 ## Deployment
 
