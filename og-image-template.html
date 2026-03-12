@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Plus+Jakarta+Sans:wght@600;700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1200px; height: 630px; overflow: hidden; }
+    .card {
+      width: 1200px;
+      height: 630px;
+      background: #1A1A1A;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Decorative grid */
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      background-image:
+        linear-gradient(rgba(242,240,233,1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(242,240,233,1) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    /* Clay accent bar */
+    .accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: #CC5833;
+    }
+    /* Corner accent */
+    .corner {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: #CC5833;
+      opacity: 0.08;
+      border-top-left-radius: 60px;
+    }
+    .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #CC5833;
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      color: #F2F0E9;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 52px;
+      color: #F2F0E9;
+      opacity: 0.7;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .tagline {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 17px;
+      color: #F2F0E9;
+      opacity: 0.4;
+      position: relative;
+      border-left: 2px solid #7A8C70;
+      padding-left: 16px;
+    }
+    .url {
+      position: absolute;
+      bottom: 40px;
+      right: 90px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 15px;
+      color: #F2F0E9;
+      opacity: 0.3;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="accent"></div>
+    <div class="corner"></div>
+    <div class="label">Procesverbetering</div>
+    <div class="title">GearShyft</div>
+    <div class="subtitle">Processen die werken<br>zoals jullie werken.</div>
+    <div class="tagline">Werkprocessen verbeteren · Tools & systemen bouwen · Data op orde brengen</div>
+    <div class="url">gearshyft.nl</div>
+  </div>
+</body>
+</html>
