@@ -1,10 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GearShyft</title>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9425PC33WR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9425PC33WR');
+    </script>
+    <title>GearShyft | Praktische Procesverbetering voor Groeiende Bedrijven</title>
+    <meta name="description" content="GearShyft bouwt praktische digitale workflows, tools en systemen die passen bij hoe jullie team echt werkt. Proces eerst, technologie tweede." />
+    <meta name="theme-color" content="#1A1A1A" />
+    <link rel="canonical" href="https://gearshyft.nl/" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="nl" href="https://gearshyft.nl/" />
+    <link rel="alternate" hreflang="en" href="https://gearshyft.nl/" />
+    <link rel="alternate" hreflang="x-default" href="https://gearshyft.nl/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gearshyft.nl" />
+    <meta property="og:title" content="GearShyft | Praktische Procesverbetering voor Groeiende Bedrijven" />
+    <meta property="og:description" content="GearShyft bouwt praktische digitale workflows, tools en systemen die passen bij hoe jullie team echt werkt. Proces eerst, technologie tweede." />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="GearShyft" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GearShyft | Praktische Procesverbetering voor Groeiende Bedrijven" />
+    <meta name="twitter:description" content="GearShyft bouwt praktische digitale workflows, tools en systemen die passen bij hoe jullie team echt werkt. Proces eerst, technologie tweede." />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -12,11 +44,71 @@
   <body class="bg-cream text-charcoal font-sans antialiased selection:bg-clay selection:text-cream">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    
+
     <svg style="display:none;">
       <filter id="organicNoise">
         <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/>
       </filter>
     </svg>
+
+    <!-- Structured Data: Organization + ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "GearShyft",
+      "url": "https://gearshyft.nl",
+      "email": "max@gearshyft.nl",
+      "description": "Praktische procesverbetering en digitale workflows voor groeiende bedrijven",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Netherlands"
+      },
+      "knowsLanguage": ["nl", "en"],
+      "priceRange": "$$",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Diensten",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Procesverbetering",
+              "description": "Operationele processen analyseren en praktisch verbeteren"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workflow Automatisering",
+              "description": "Handmatige werkprocessen automatiseren waar het echt helpt"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digitale Werkprocessen",
+              "description": "Praktische digitale workflows bouwen die passen bij het team"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Structured Data: WebSite (enables sitelinks search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "GearShyft",
+      "url": "https://gearshyft.nl",
+      "inLanguage": ["nl", "en"],
+      "description": "Praktische procesverbetering en digitale workflows voor groeiende bedrijven"
+    }
+    </script>
   </body>
 </html>

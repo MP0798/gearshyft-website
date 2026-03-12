@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, MousePointer2 } from 'lucide-react';
+import { ArrowRight, MousePointer2, Send, Menu, X } from 'lucide-react';
 
 import { Player } from '@remotion/player';
 import { BlueprintScanner } from './remotion/BlueprintScanner';
@@ -75,7 +75,12 @@ const LangSwitch = () => {
 const Navbar = () => {
   const navRef = useRef(null);
   const { t } = useTranslation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const overlayRef = useRef(null);
+  const menuLinksRef = useRef([]);
+  const menuTl = useRef(null);
 
+  // Scroll-triggered navbar styling
   useEffect(() => {
     let ctx = gsap.context(() => {
       ScrollTrigger.create({
@@ -92,21 +97,116 @@ const Navbar = () => {
     return () => ctx.revert();
   }, []);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  // GSAP animation for mobile menu
+  useEffect(() => {
+    if (!overlayRef.current) return;
+
+    if (menuOpen) {
+      const links = menuLinksRef.current.filter(Boolean);
+      gsap.set(overlayRef.current, { display: 'flex' });
+      const tl = gsap.timeline();
+      tl.fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power3.out" });
+      tl.fromTo(links, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out", stagger: 0.08 }, "-=0.2");
+      menuTl.current = tl;
+    } else {
+      const tl = gsap.timeline({
+        onComplete: () => {
+          if (overlayRef.current) gsap.set(overlayRef.current, { display: 'none' });
+        }
+      });
+      tl.to(overlayRef.current, { opacity: 0, duration: 0.3, ease: "power2.in" });
+      menuTl.current = tl;
+    }
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  const navLinks = [
+    { href: '#philosophy', label: t.navMethod },
+    { href: '#features', label: t.navFunctional },
+    { href: '#protocol', label: t.navArchive },
+  ];
+
   return (
-    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 w-full pointer-events-none">
-      <nav ref={navRef} className="pointer-events-auto flex items-center justify-between px-8 py-4 rounded-[3rem] w-full max-w-6xl transition-colors text-cream border border-transparent">
-        <div className="font-sans font-bold text-xl tracking-tight">GearShyft.</div>
-        <div className="hidden md:flex items-center gap-8 font-mono text-xs tracking-wide">
-          <a href="#philosophy" className="hover:-translate-y-[2px] transition-transform duration-300">{t.navMethod}</a>
-          <a href="#work" className="hover:-translate-y-[2px] transition-transform duration-300">{t.navFunctional}</a>
-          <a href="#protocol" className="hover:-translate-y-[2px] transition-transform duration-300">{t.navArchive}</a>
-          <LangSwitch />
-        </div>
-        <MagneticBtn href="#book" className="btn-clay px-6 py-2 h-auto text-xs w-auto">
-          {t.navCta}
-        </MagneticBtn>
-      </nav>
-    </div>
+    <>
+      <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 w-full pointer-events-none">
+        <nav ref={navRef} className="pointer-events-auto flex items-center justify-between px-8 py-4 rounded-[3rem] w-full max-w-6xl transition-colors text-cream border border-transparent">
+          <div className="font-sans font-bold text-xl tracking-tight">GearShyft.</div>
+          <div className="hidden md:flex items-center gap-8 font-mono text-xs tracking-wide">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="hover:-translate-y-[2px] transition-transform duration-300">{link.label}</a>
+            ))}
+            <LangSwitch />
+          </div>
+          <div className="flex items-center gap-4">
+            <MagneticBtn href="#contact" className="btn-clay px-6 py-2 h-auto text-xs w-auto hidden md:inline-flex">
+              {t.navCta}
+            </MagneticBtn>
+            <button
+              onClick={() => setMenuOpen(true)}
+              aria-label={t.menuOpen}
+              className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]"
+            >
+              <span className="block w-6 h-[2px] bg-current rounded-full" />
+              <span className="block w-6 h-[2px] bg-current rounded-full" />
+              <span className="block w-4 h-[2px] bg-current rounded-full self-start" />
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      {/* Mobile fullscreen overlay menu */}
+      <div
+        ref={overlayRef}
+        className="fixed inset-0 z-[100] bg-charcoal flex-col items-center justify-center px-8"
+        style={{ display: 'none' }}
+      >
+        {/* Close button */}
+        <button
+          onClick={closeMenu}
+          aria-label={t.menuClose}
+          className="absolute top-10 right-8 text-cream hover:text-clay transition-colors duration-300"
+        >
+          <X size={32} strokeWidth={1.5} />
+        </button>
+
+        {/* Menu links */}
+        <nav className="flex flex-col items-center gap-8">
+          {navLinks.map((link, i) => (
+            <a
+              key={link.href}
+              href={link.href}
+              ref={(el) => (menuLinksRef.current[i] = el)}
+              onClick={closeMenu}
+              className="font-serif italic text-cream text-4xl sm:text-5xl hover:text-clay transition-colors duration-300"
+            >
+              {link.label}
+            </a>
+          ))}
+          <div ref={(el) => (menuLinksRef.current[navLinks.length] = el)}>
+            <LangSwitch />
+          </div>
+          <a
+            ref={(el) => (menuLinksRef.current[navLinks.length + 1] = el)}
+            href="#contact"
+            onClick={closeMenu}
+            className="btn-magnetic btn-clay px-8 py-3 text-sm font-mono tracking-wide rounded-full inline-flex items-center gap-2 mt-4"
+          >
+            {t.navCta}
+          </a>
+        </nav>
+      </div>
+    </>
   );
 };
 
@@ -134,7 +234,7 @@ const Hero = () => {
       {/* Background Image: Dark Forest / Lab texture */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542385151-54da74c65e23?q=80&w=2600&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
       />
       {/* Heavy Primary to Black gradient overlay per spec */}
       <div className="absolute inset-0 z-10 hero-overlay opacity-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-moss/40" />
@@ -168,23 +268,20 @@ const Hero = () => {
 // Card 1 - Diagnostic Shuffler
 const DiagnosticShufflerCard = () => {
   const { t } = useTranslation();
-  const [cards, setCards] = useState([
-    { id: 1, label: t.card1Label1, state: t.card1State1 },
-    { id: 2, label: t.card1Label2, state: t.card1State2 },
-    { id: 3, label: t.card1Label3, state: t.card1State3 }
-  ]);
+  const [order, setOrder] = useState([0, 1, 2]);
 
-  useEffect(() => {
-    setCards([
+  const cards = useMemo(() => {
+    const base = [
       { id: 1, label: t.card1Label1, state: t.card1State1 },
       { id: 2, label: t.card1Label2, state: t.card1State2 },
       { id: 3, label: t.card1Label3, state: t.card1State3 }
-    ]);
-  }, [t]);
+    ];
+    return order.map(i => base[i]);
+  }, [t, order]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCards(prev => {
+      setOrder(prev => {
         const newArr = [...prev];
         const last = newArr.pop();
         newArr.unshift(last);
@@ -404,7 +501,7 @@ const Philosophy = () => {
   return (
     <section ref={philRef} id="philosophy" className="relative py-48 bg-charcoal overflow-hidden flex items-center justify-center">
       {/* Background organic parallax */}
-      <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2400&auto=format&fit=crop" alt="Organic Tech Background" className="phil-bg absolute inset-0 w-full h-[150%] object-cover opacity-10" />
+      <img src="/images/philosophy-bg.jpg" alt="Organic Tech Background" className="phil-bg absolute inset-0 w-full h-[150%] object-cover opacity-10" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center phil-text">
         <span className="block font-sans text-sm md:text-base text-cream/60 tracking-widest uppercase mb-12 border-b border-cream/20 pb-4 max-w-md mx-auto">
@@ -547,25 +644,231 @@ const Protocol = () => {
   );
 };
 
-// F / G. CTA & FOOTER
-const Footer = () => {
+// INTERMEDIATE CTA BANNER
+const CTABanner = ({ variant = 'light', textKey, btnKey }) => {
   const { t } = useTranslation();
+  const bannerRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(bannerRef.current, {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: bannerRef.current,
+          start: "top 85%"
+        }
+      });
+    }, bannerRef);
+    return () => ctx.revert();
+  }, []);
+
+  const isLight = variant === 'light';
+
   return (
-    <footer id="book" className="bg-charcoal relative z-20 rounded-t-[4rem] -mt-12 overflow-hidden shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
-      <div className="py-32 px-6 md:px-16 lg:px-24">
-        <div className="max-w-4xl mx-auto text-center mb-32">
-          <h2 className="font-serif italic text-6xl md:text-8xl text-cream mb-8 leading-none">
-            {t.ctaTitle} <span className="text-clay">{t.ctaHighlight}</span> {t.ctaEnd}
-          </h2>
-          <p className="font-mono text-cream/60 max-w-lg mx-auto mb-12">
-            {t.ctaDesc}
-          </p>
-          <MagneticBtn className="btn-clay px-12 py-6 text-lg" href="#book">
-            {t.ctaBtn}
-          </MagneticBtn>
+    <div
+      ref={bannerRef}
+      className={`py-20 px-6 md:px-16 lg:px-24 ${isLight ? 'bg-cream text-charcoal' : 'bg-charcoal text-cream'}`}
+    >
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <p className={`font-serif italic text-3xl md:text-4xl leading-tight ${isLight ? 'text-charcoal' : 'text-cream'}`}>
+          {t[textKey]}
+        </p>
+        <MagneticBtn
+          href="#contact"
+          className={`${isLight ? 'btn-clay' : 'btn-moss'} px-10 py-5 text-base whitespace-nowrap`}
+        >
+          {t[btnKey]} <ArrowRight size={18} />
+        </MagneticBtn>
+      </div>
+    </div>
+  );
+};
+
+// PRIVACY MODAL
+const PrivacyModal = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
+  const overlayRef = useRef(null);
+
+  // Lock body scroll when open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    if (isOpen) window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  const sections = [
+    { title: t.privacySectionWho, text: t.privacySectionWhoText },
+    { title: t.privacySectionWhat, text: t.privacySectionWhatText },
+    { title: t.privacySectionWhy, text: t.privacySectionWhyText },
+    { title: t.privacySectionCookies, text: t.privacySectionCookiesText },
+    { title: t.privacySectionSharing, text: t.privacySectionSharingText },
+    { title: t.privacySectionRights, text: t.privacySectionRightsText },
+    { title: t.privacySectionChanges, text: t.privacySectionChangesText },
+  ];
+
+  return (
+    <div
+      ref={overlayRef}
+      className="fixed inset-0 z-[100] bg-charcoal/95 backdrop-blur-sm flex items-start justify-center overflow-y-auto"
+      onClick={(e) => { if (e.target === overlayRef.current) onClose(); }}
+    >
+      <div className="relative w-full max-w-3xl mx-auto px-6 py-20 md:py-24">
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          aria-label={t.privacyClose}
+          className="fixed top-8 right-8 text-cream/60 hover:text-clay transition-colors duration-300 z-[101]"
+        >
+          <X size={32} strokeWidth={1.5} />
+        </button>
+
+        {/* Content */}
+        <h2 className="font-serif italic text-4xl md:text-5xl text-cream mb-6">{t.privacyTitle}</h2>
+        <p className="font-mono text-sm text-cream/60 leading-relaxed mb-12 border-l border-clay pl-6">
+          {t.privacyIntro}
+        </p>
+
+        <div className="space-y-10">
+          {sections.map((section, i) => (
+            <div key={i}>
+              <h3 className="font-sans font-bold text-lg text-cream mb-3">{section.title}</h3>
+              <p className="font-mono text-sm text-cream/60 leading-relaxed">{section.text}</p>
+            </div>
+          ))}
         </div>
 
-        <div className="border-t border-cream/10 pt-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-mono text-xs text-cream/50">
+        <div className="mt-16 pt-8 border-t border-cream/10">
+          <button
+            onClick={onClose}
+            className="font-mono text-xs uppercase tracking-widest text-clay hover:text-cream transition-colors duration-300"
+          >
+            {t.privacyClose}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// G. CONTACT SECTION & FOOTER
+const Footer = ({ onOpenPrivacy }) => {
+  const { t } = useTranslation();
+  return (
+    <footer id="contact" className="bg-charcoal relative z-20 rounded-t-[4rem] -mt-12 overflow-hidden shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+      {/* Contact Section */}
+      <div className="py-32 px-6 md:px-16 lg:px-24">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-serif italic text-6xl md:text-8xl text-cream mb-6 leading-none text-center">
+            {t.contactTitle} <span className="text-clay">{t.contactHighlight}</span>
+          </h2>
+          <p className="font-mono text-cream/60 max-w-lg mx-auto mb-16 text-center">
+            {t.contactIntro}
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Contact Form via Formsubmit.co (free, no account needed) */}
+            <form
+              action="https://formsubmit.co/max@gearshyft.nl"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* Formsubmit config: disable captcha page, redirect back to site */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://gearshyft.nl/" />
+              <input type="hidden" name="_subject" value="Nieuw bericht via gearshyft.nl" />
+              {/* Honeypot spam protection */}
+              <input type="text" name="_honey" style={{ display: 'none' }} />
+              <div>
+                <label htmlFor="contact-name" className="block font-mono text-xs uppercase tracking-widest text-cream/50 mb-3">
+                  {t.contactNameLabel}
+                </label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  required
+                  placeholder={t.contactNamePlaceholder}
+                  className="w-full bg-cream/5 border border-cream/15 rounded-2xl px-6 py-4 text-cream font-mono text-sm placeholder:text-cream/30 focus:outline-none focus:border-clay/60 focus:bg-cream/10 transition-all duration-300"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="contact-email" className="block font-mono text-xs uppercase tracking-widest text-cream/50 mb-3">
+                  {t.contactEmailLabel}
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  required
+                  placeholder={t.contactEmailPlaceholder}
+                  className="w-full bg-cream/5 border border-cream/15 rounded-2xl px-6 py-4 text-cream font-mono text-sm placeholder:text-cream/30 focus:outline-none focus:border-clay/60 focus:bg-cream/10 transition-all duration-300"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="contact-message" className="block font-mono text-xs uppercase tracking-widest text-cream/50 mb-3">
+                  {t.contactMessageLabel}
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  required
+                  rows={5}
+                  placeholder={t.contactMessagePlaceholder}
+                  className="w-full bg-cream/5 border border-cream/15 rounded-2xl px-6 py-4 text-cream font-mono text-sm placeholder:text-cream/30 focus:outline-none focus:border-clay/60 focus:bg-cream/10 transition-all duration-300 resize-none"
+                />
+              </div>
+
+              <button type="submit" className="btn-magnetic btn-clay px-10 py-5 text-base">
+                <span className="flex items-center gap-2">{t.contactSubmit} <Send size={16} /></span>
+              </button>
+            </form>
+
+            {/* Direct Email Option */}
+            <div className="flex flex-col justify-center lg:pl-8">
+              <div className="bg-cream/5 border border-cream/10 rounded-[2.5rem] p-10">
+                <p className="font-mono text-sm text-cream/50 mb-6">{t.contactOrEmail}</p>
+                <a
+                  href="mailto:max@gearshyft.nl"
+                  className="font-sans font-bold text-2xl md:text-3xl text-cream hover:text-clay transition-colors duration-300 break-all"
+                >
+                  max@gearshyft.nl
+                </a>
+                <div className="mt-8 pt-8 border-t border-cream/10">
+                  <a
+                    href="mailto:max@gearshyft.nl"
+                    className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-clay hover:text-cream transition-colors duration-300"
+                  >
+                    {t.contactDirectEmail} <ArrowRight size={14} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="px-6 md:px-16 lg:px-24 pb-16">
+        <div className="border-t border-cream/10 pt-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-mono text-xs text-cream/50 max-w-6xl mx-auto">
           <div className="col-span-1 md:col-span-2">
             <h4 className="font-sans font-bold text-2xl text-cream mb-4">GearShyft.</h4>
             <p className="max-w-xs leading-relaxed">{t.footerDesc}</p>
@@ -574,24 +877,31 @@ const Footer = () => {
           <div>
             <h5 className="uppercase tracking-widest text-clay mb-6">{t.footerNav}</h5>
             <ul className="space-y-4">
-              <li><a href="#work" className="hover:text-cream transition-colors">{t.footerNavItems[0]}</a></li>
+              <li><a href="#features" className="hover:text-cream transition-colors">{t.footerNavItems[0]}</a></li>
               <li><a href="#philosophy" className="hover:text-cream transition-colors">{t.footerNavItems[1]}</a></li>
               <li><a href="#protocol" className="hover:text-cream transition-colors">{t.footerNavItems[2]}</a></li>
+              <li><button onClick={onOpenPrivacy} className="hover:text-cream transition-colors">{t.footerPrivacy}</button></li>
             </ul>
           </div>
 
           <div>
             <h5 className="uppercase tracking-widest text-clay mb-6">{t.footerContact}</h5>
             <ul className="space-y-4">
-              <li><a href="#" className="hover:text-cream transition-colors">max@gearshyft.nl</a></li>
-              <li><a href="#" className="hover:text-cream transition-colors">Twitter (X)</a></li>
-              <li><a href="#" className="hover:text-cream transition-colors">LinkedIn</a></li>
+              <li><a href="mailto:max@gearshyft.nl" className="hover:text-cream transition-colors">max@gearshyft.nl</a></li>
+              {/* TODO: Update with real Twitter/X URL */}
+              <li><a href="https://x.com/gearshyft" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">Twitter (X)</a></li>
+              {/* TODO: Update with real LinkedIn URL */}
+              <li><a href="https://linkedin.com/company/gearshyft" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">LinkedIn</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-24 flex flex-col md:flex-row justify-between items-center px-4 font-mono text-[10px] text-cream/40 uppercase tracking-widest">
-          <span>© {new Date().getFullYear()} GearShyft</span>
+        <div className="mt-24 flex flex-col md:flex-row justify-between items-center px-4 font-mono text-[10px] text-cream/40 uppercase tracking-widest max-w-6xl mx-auto">
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <span>&copy; {new Date().getFullYear()} GearShyft</span>
+            {/* TODO: Max - vul hier het echte KvK-nummer in */}
+            <span className="font-mono text-[10px] text-cream/40 uppercase tracking-widest">{t.footerKvk}</span>
+          </div>
 
           <div className="flex items-center gap-3 mt-4 md:mt-0 bg-moss/20 px-4 py-2 rounded-full border border-moss/50">
             <span className="w-2 h-2 rounded-full bg-[#CC5833] animate-pulse"></span>
@@ -603,23 +913,34 @@ const Footer = () => {
   );
 };
 
+function AppContent() {
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+
+  return (
+    <div className="relative selection:bg-clay selection:text-cream font-sans bg-cream text-charcoal">
+      <div className="noise-overlay fixed inset-0 pointer-events-none z-50"></div>
+
+      <Navbar />
+
+      <main>
+        <Hero />
+        <Features />
+        <CTABanner variant="light" textKey="ctaBanner1Text" btnKey="ctaBanner1Btn" />
+        <Philosophy />
+        <Protocol />
+        <CTABanner variant="dark" textKey="ctaBanner2Text" btnKey="ctaBanner2Btn" />
+      </main>
+
+      <Footer onOpenPrivacy={() => setPrivacyOpen(true)} />
+      <PrivacyModal isOpen={privacyOpen} onClose={() => setPrivacyOpen(false)} />
+    </div>
+  );
+}
+
 function App() {
   return (
     <LanguageProvider>
-      <div className="relative selection:bg-clay selection:text-cream font-sans bg-cream text-charcoal">
-        <div className="noise-overlay fixed inset-0 pointer-events-none z-50"></div>
-
-        <Navbar />
-
-        <main>
-          <Hero />
-          <Features />
-          <Philosophy />
-          <Protocol />
-        </main>
-
-        <Footer />
-      </div>
+      <AppContent />
     </LanguageProvider>
   );
 }
