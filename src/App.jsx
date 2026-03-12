@@ -583,7 +583,7 @@ const Footer = () => {
           <div>
             <h5 className="uppercase tracking-widest text-clay mb-6">{t.footerContact}</h5>
             <ul className="space-y-4">
-              <li><a href="#" className="hover:text-cream transition-colors">hello@gearshyft.io</a></li>
+              <li><a href="#" className="hover:text-cream transition-colors">max@gearshyft.nl</a></li>
               <li><a href="#" className="hover:text-cream transition-colors">Twitter (X)</a></li>
               <li><a href="#" className="hover:text-cream transition-colors">LinkedIn</a></li>
             </ul>
