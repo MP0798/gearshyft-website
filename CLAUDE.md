@@ -43,6 +43,7 @@ src/
 │   ├── ServiceDetailPage.jsx # Herbruikbaar component voor dienst detail pagina's (:slug)
 │   ├── BlogIndexPage.jsx    # Blog overzicht met post listing
 │   ├── BlogPostPage.jsx     # Blog detail pagina met JSON-LD schema
+│   ├── ProjectenPage.jsx    # Projecten overzicht met 3 showcases
 │   ├── WerkwijzePage.jsx    # Werkwijze/aanpak stappen
 │   ├── ContactPage.jsx      # Contactformulier (Resend) + Calendly + email
 │   ├── PrivacyPage.jsx      # Privacyverklaring (was modal, nu pagina)
@@ -147,6 +148,7 @@ Componenten in `src/components/`, pagina's in `src/pages/`.
 | `/contact` | `/en/contact` | ContactPage |
 | `/privacy` | `/en/privacy` | PrivacyPage |
 | `/faq` | `/en/faq` | FaqPage |
+| `/projecten` | `/en/projects` | ProjectenPage |
 | `/blog` | `/en/blog` | BlogIndexPage |
 | `/blog/:slug` | `/en/blog/:slug` | BlogPostPage |
 

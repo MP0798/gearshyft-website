@@ -116,6 +116,17 @@ const routeMeta = {
       description: 'We structure your data, build a central database with dashboards, and make sure your numbers are reliable and accessible.',
     },
   },
+  '/projecten': {
+    en: '/en/projects',
+    nl: {
+      title: 'Projecten | GearShyft - Gebouwd, Niet Alleen Besproken',
+      description: 'Echte projecten, echte resultaten. Bekijk hoe GearShyft werkprocessen, tools en data verbetert voor groeiende bedrijven.',
+    },
+    en_meta: {
+      title: 'Projects | GearShyft - Built, Not Just Talked About',
+      description: 'Real projects, real results. See how GearShyft improves work processes, tools, and data for growing businesses.',
+    },
+  },
   '/blog': {
     en: '/en/blog',
     nl: {

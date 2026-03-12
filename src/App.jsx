@@ -13,6 +13,7 @@ const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const FaqPage = lazy(() => import('./pages/FaqPage'));
 const BlogIndexPage = lazy(() => import('./pages/BlogIndexPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+const ProjectenPage = lazy(() => import('./pages/ProjectenPage'));
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/blog" element={<BlogIndexPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/projecten" element={<ProjectenPage />} />
           </Route>
 
           {/* EN routes */}
@@ -46,6 +48,7 @@ function App() {
             <Route path="/en/faq" element={<FaqPage />} />
             <Route path="/en/blog" element={<BlogIndexPage />} />
             <Route path="/en/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/en/projects" element={<ProjectenPage />} />
           </Route>
 
           {/* Fallback: redirect unknown routes to home */}

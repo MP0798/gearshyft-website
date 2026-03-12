@@ -14,6 +14,7 @@ const nlToEn = {
   '/privacy': '/en/privacy',
   '/faq': '/en/faq',
   '/blog': '/en/blog',
+  '/projecten': '/en/projects',
 };
 
 // Reverse mapping: EN path -> NL path
@@ -35,6 +36,7 @@ const pathMap = {
   '/privacy': { nl: '/privacy', en: '/en/privacy' },
   '/faq': { nl: '/faq', en: '/en/faq' },
   '/blog': { nl: '/blog', en: '/en/blog' },
+  '/projecten': { nl: '/projecten', en: '/en/projects' },
 };
 
 const translations = {
@@ -134,6 +136,56 @@ const translations = {
     blogIntro: 'Tips, cases and lessons from the field. How real businesses improve their processes, without the jargon.',
     blogReadMore: 'Read More',
     blogBackLink: 'Back to Blog',
+
+    // Projects Page
+    projectsLabel: 'Projects',
+    projectsTitle: 'Built, not just talked about.',
+    projectsIntro: 'Real projects, real results. This is what it looks like when we get to work.',
+    projectsItems: [
+      {
+        name: 'RoosterHub',
+        tag: 'Work Processes',
+        slug: 'work-processes',
+        situation: 'A call center managed shift schedules in Excel. Privacy-sensitive data was shared via email, creating a GDPR risk. Onboarding new planners took 2 weeks because the process was undocumented and overly complex.',
+        approach: 'We walked through the entire scheduling process with the team on the floor. Simplified the steps, removed unnecessary handoffs, and built a lightweight scheduling app that does exactly what they needed.',
+        results: [
+          'Cost: \u20AC1.10 per employee per month',
+          'Onboarding time: from 2 weeks to 1 day',
+          'GDPR risk eliminated',
+          'Zero Excel files in the process',
+        ],
+      },
+      {
+        name: 'Desk to Dash',
+        tag: 'Tools & Systems',
+        slug: 'tools-and-systems',
+        situation: 'A freelancer managed hours, invoices, expenses, VAT, and planning in 6 separate tools. Switching between apps, manually copying data, and reconciling numbers at the end of each month. Hours lost every week.',
+        approach: 'We mapped out all the flows, identified where data was duplicated or manually transferred, and built a single platform that brings everything together.',
+        results: [
+          'From 6 tools to 1 platform',
+          'Month-end close: from a full day to a few clicks',
+          'One login, one overview',
+          'Ready for the accountant automatically',
+        ],
+      },
+      {
+        name: 'Industrial company',
+        tag: 'Data Management',
+        slug: 'data-management',
+        situation: 'A mid-sized industrial company managed operational data across 430+ Excel tabs. Inconsistent formats, no overview, and a team losing hours every week manually merging data. Nobody could say with certainty which numbers were correct.',
+        approach: 'We migrated everything to a central database with automated imports from existing sources and quality checks that catch errors before they end up in a report.',
+        results: [
+          '430+ Excel tabs replaced by one database',
+          'Live dashboard for the entire team',
+          'Automated data imports and quality checks',
+          'Hours per week freed up for actual work',
+        ],
+      },
+    ],
+    projectsSituationLabel: 'The situation',
+    projectsApproachLabel: 'What we did',
+    projectsResultsLabel: 'Results',
+    projectsServiceLink: 'More about this service',
 
     // Mobile menu
     menuOpen: 'Open menu',
@@ -263,8 +315,8 @@ const translations = {
         { title: 'Insight instead of gut feeling', text: 'On top of the clean data we build dashboards your team can use every day. Not a one-time report that ends up in a drawer, but live insight into what is happening in your operations. And we make sure you can maintain it yourselves. No dependency on us.' },
       ],
       forWho: 'Businesses where nobody can say with certainty whether the numbers are right. Teams that spend more time searching for and copying data than actually doing something with it. Organizations that want to grow but need to get their data foundation in order first.',
-      caseTitle: 'Biogas facility',
-      caseText: 'Over 430 Excel tabs. Inconsistent formats, no overview, and a team losing hours every week manually merging data. We migrated everything to a central database with automated imports and quality checks. The team now has a live dashboard and spends those hours on their actual work.',
+      caseTitle: 'Industrial company',
+      caseText: 'A mid-sized industrial company managed operational data across 430+ Excel tabs. Inconsistent formats, no overview, and a team losing hours every week manually merging data. We migrated everything to a central database with automated imports and quality checks. The team now has a live dashboard and spends those hours on their actual work.',
     },
 
     // Approach Page
@@ -389,6 +441,56 @@ const translations = {
     blogIntro: 'Tips, cases en lessen uit het veld. Hoe echte bedrijven hun processen verbeteren, zonder het jargon.',
     blogReadMore: 'Lees Meer',
     blogBackLink: 'Terug naar Blog',
+
+    // Projects Page
+    projectsLabel: 'Projecten',
+    projectsTitle: 'Gebouwd, niet alleen besproken.',
+    projectsIntro: 'Echte projecten, echte resultaten. Dit is hoe het eruitziet als we aan de slag gaan.',
+    projectsItems: [
+      {
+        name: 'RoosterHub',
+        tag: 'Werkprocessen',
+        slug: 'werkprocessen',
+        situation: 'Een callcenter regelde dienstroosters in Excel. Privacygevoelige data ging via e-mail rond, een AVG-risico. Nieuwe planners inwerken duurde 2 weken omdat het proces niet was vastgelegd en onnodig complex was.',
+        approach: 'We hebben het hele roosterproces doorgelicht op de werkvloer met het team. Stappen vereenvoudigd, onnodige schakels verwijderd en een lichtgewicht rooster-app gebouwd die precies doet wat ze nodig hadden.',
+        results: [
+          'Kosten: \u20AC1,10 per medewerker per maand',
+          'Inwerktijd: van 2 weken naar 1 dag',
+          'AVG-risico weggenomen',
+          'Nul Excel-bestanden in het proces',
+        ],
+      },
+      {
+        name: 'Desk to Dash',
+        tag: 'Tools & Systemen',
+        slug: 'tools-en-systemen',
+        situation: 'Een ZZP\'er beheerde uren, facturen, kosten, BTW en planning in 6 losse tools. Schakelen tussen apps, handmatig data kopieren en aan het eind van elke maand alles afstemmen. Uren per week kwijt.',
+        approach: 'We hebben alle stromen in kaart gebracht, onderzocht waar data gedupliceerd of handmatig overgezet werd, en een platform gebouwd dat alles samenvoegt.',
+        results: [
+          'Van 6 tools naar 1 platform',
+          'Maandafsluiting: van een hele dag naar een paar klikken',
+          'E\u00E9n login, \u00E9\u00E9n overzicht',
+          'Automatisch klaar voor de boekhouder',
+        ],
+      },
+      {
+        name: 'Industrieel bedrijf',
+        tag: 'Data op Orde',
+        slug: 'data-op-orde',
+        situation: 'Een middelgroot industrieel bedrijf beheerde operationele data in meer dan 430 Excel-tabs. Inconsistente formats, geen overzicht, en een team dat uren per week kwijt was aan handmatig data samenvoegen. Niemand kon met zekerheid zeggen welke cijfers klopten.',
+        approach: 'Alles gemigreerd naar een centrale database met automatische imports vanuit bestaande bronnen en kwaliteitschecks die fouten vangen voordat ze in een rapport belanden.',
+        results: [
+          '430+ Excel-tabs vervangen door \u00E9\u00E9n database',
+          'Live dashboard voor het hele team',
+          'Automatische data-imports en kwaliteitschecks',
+          'Uren per week vrij voor het eigenlijke werk',
+        ],
+      },
+    ],
+    projectsSituationLabel: 'De situatie',
+    projectsApproachLabel: 'Wat we deden',
+    projectsResultsLabel: 'Resultaat',
+    projectsServiceLink: 'Meer over deze dienst',
 
     // Mobile menu
     menuOpen: 'Menu openen',
@@ -518,8 +620,8 @@ const translations = {
         { title: 'Inzicht in plaats van buikgevoel', text: 'Op de schone data bouwen we dashboards die jullie team dagelijks kan gebruiken. Geen eenmalig rapport dat in een la verdwijnt, maar live inzicht in wat er in jullie operatie gebeurt. En we zorgen dat jullie het zelf kunnen onderhouden. Geen afhankelijkheid van ons.' },
       ],
       forWho: 'Bedrijven waar niemand met zekerheid kan zeggen of de cijfers kloppen. Teams die meer tijd besteden aan data zoeken en kopieren dan aan er iets mee doen. Organisaties die willen groeien maar eerst hun datafundament op orde moeten hebben.',
-      caseTitle: 'Biogasinstallatie',
-      caseText: 'Meer dan 430 Excel-tabs. Inconsistente formats, geen overzicht, en een team dat uren per week kwijt was aan handmatig data samenvoegen. We hebben alles gemigreerd naar een centrale database met automatische imports en kwaliteitschecks. Het team heeft nu een live dashboard en besteedt die uren aan hun eigenlijke werk.',
+      caseTitle: 'Industrieel bedrijf',
+      caseText: 'Een middelgroot industrieel bedrijf beheerde operationele data in meer dan 430 Excel-tabs. Inconsistente formats, geen overzicht, en uren per week kwijt aan handmatig data samenvoegen. We hebben alles gemigreerd naar een centrale database met automatische imports en kwaliteitschecks. Het team heeft nu een live dashboard en besteedt die uren aan hun eigenlijke werk.',
     },
 
     // Approach Page

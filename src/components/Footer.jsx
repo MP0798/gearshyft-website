@@ -7,6 +7,7 @@ const Footer = () => {
   const dienstenPath = useLocalizedPath('/diensten');
   const overPath = useLocalizedPath('/over');
   const werkwijzePath = useLocalizedPath('/werkwijze');
+  const projectenPath = useLocalizedPath('/projecten');
   const blogPath = useLocalizedPath('/blog');
   const contactPath = useLocalizedPath('/contact');
   const privacyPath = useLocalizedPath('/privacy');
@@ -27,6 +28,7 @@ const Footer = () => {
               <li><Link to={dienstenPath} className="hover:text-cream transition-colors">{t.footerNavItems[0]}</Link></li>
               <li><Link to={overPath} className="hover:text-cream transition-colors">{t.footerNavItems[1]}</Link></li>
               <li><Link to={werkwijzePath} className="hover:text-cream transition-colors">{t.footerNavItems[2]}</Link></li>
+              <li><Link to={projectenPath} className="hover:text-cream transition-colors">{t.projectsLabel}</Link></li>
               <li><Link to={blogPath} className="hover:text-cream transition-colors">{t.footerNavItems[3]}</Link></li>
               <li><Link to={privacyPath} className="hover:text-cream transition-colors">{t.footerPrivacy}</Link></li>
             </ul>
