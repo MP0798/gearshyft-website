@@ -1,19 +1,22 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider } from './i18n';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import OverPage from './pages/OverPage';
-import DienstenPage from './pages/DienstenPage';
-import ServiceDetailPage from './pages/ServiceDetailPage';
-import WerkwijzePage from './pages/WerkwijzePage';
-import ContactPage from './pages/ContactPage';
-import PrivacyPage from './pages/PrivacyPage';
-import FaqPage from './pages/FaqPage';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
+const OverPage = lazy(() => import('./pages/OverPage'));
+const DienstenPage = lazy(() => import('./pages/DienstenPage'));
+const ServiceDetailPage = lazy(() => import('./pages/ServiceDetailPage'));
+const WerkwijzePage = lazy(() => import('./pages/WerkwijzePage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const FaqPage = lazy(() => import('./pages/FaqPage'));
 
 function App() {
   return (
     <BrowserRouter>
       <LanguageProvider>
+        <Suspense fallback={<div className="min-h-screen bg-charcoal" />}>
         <Routes>
           {/* NL routes (default) */}
           <Route element={<Layout />}>
@@ -42,6 +45,7 @@ function App() {
           {/* Fallback: redirect unknown routes to home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </Suspense>
       </LanguageProvider>
     </BrowserRouter>
   );
