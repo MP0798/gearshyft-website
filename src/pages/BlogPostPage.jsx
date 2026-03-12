@@ -207,6 +207,54 @@ const BlogPostPage = () => {
         })}
       </div>
 
+      {/* Related Services */}
+      {post.relatedServices?.length > 0 && (
+        <section className="bg-cream py-20 px-6 md:px-16 lg:px-24">
+          <div className="max-w-5xl mx-auto">
+            <span className="block font-mono text-xs tracking-widest uppercase text-clay mb-4">
+              {lang === 'nl' ? 'Gerelateerde dienst' : 'Related service'}
+            </span>
+            <h2 className="font-sans font-bold text-2xl md:text-3xl text-charcoal mb-8 tracking-tight">
+              {lang === 'nl' ? 'Hier helpen we mee.' : 'How we can help.'}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {post.relatedServices.map((serviceKey) => {
+                const serviceDetail = t[`serviceDetail_${serviceKey}`];
+                if (!serviceDetail) return null;
+                const slugMap = {
+                  werkprocessen: lang === 'nl' ? 'werkprocessen' : 'work-processes',
+                  toolsEnSystemen: lang === 'nl' ? 'tools-en-systemen' : 'tools-and-systems',
+                  dataOpOrde: lang === 'nl' ? 'data-op-orde' : 'data-management',
+                };
+                const servicePath = lang === 'nl'
+                  ? `/diensten/${slugMap[serviceKey]}`
+                  : `/en/services/${slugMap[serviceKey]}`;
+                return (
+                  <Link
+                    key={serviceKey}
+                    to={servicePath}
+                    className="group bg-charcoal rounded-[2rem] p-8 hover:bg-charcoal/90 transition-all duration-300"
+                  >
+                    <span className="block font-mono text-[11px] tracking-widest uppercase text-clay mb-3">
+                      {lang === 'nl' ? 'Dienst' : 'Service'}
+                    </span>
+                    <span className="block font-sans font-bold text-xl text-cream group-hover:text-clay transition-colors duration-300 mb-3">
+                      {serviceDetail.label}
+                    </span>
+                    <span className="block font-mono text-sm text-cream/50 line-clamp-2">
+                      {serviceDetail.intro}
+                    </span>
+                    <span className="inline-flex items-center gap-2 mt-4 font-mono text-xs text-clay">
+                      {lang === 'nl' ? 'Bekijk dienst' : 'View service'} <ArrowRight size={12} />
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Prev / Next navigation */}
       {(prevPost || nextPost) && (
         <section className="bg-charcoal py-16 px-6 md:px-16 lg:px-24 border-t border-cream/10">

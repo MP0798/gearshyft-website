@@ -257,6 +257,44 @@ const Expectations = () => {
 };
 
 const OverPage = () => {
+  const { lang } = useTranslation();
+
+  // Person schema for Max Poppes
+  useEffect(() => {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Max Poppes',
+      jobTitle: lang === 'nl' ? 'Oprichter' : 'Founder',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'GearShyft',
+        url: 'https://gearshyft.nl',
+      },
+      url: `https://gearshyft.nl${lang === 'nl' ? '/over' : '/en/about'}`,
+      image: 'https://gearshyft.nl/images/max-poppes.webp',
+      knowsAbout: [
+        'Process Improvement',
+        'Business Operations',
+        'Digital Transformation',
+        'Data Management',
+      ],
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'person-schema';
+    script.textContent = JSON.stringify(schema);
+    const existing = document.getElementById('person-schema');
+    if (existing) existing.remove();
+    document.head.appendChild(script);
+
+    return () => {
+      const el = document.getElementById('person-schema');
+      if (el) el.remove();
+    };
+  }, [lang]);
+
   return (
     <>
       <Hero />

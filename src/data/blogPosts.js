@@ -13,6 +13,7 @@ const blogPosts = [
     publishedDate: '2026-02-10',
     readTime: 4,
     category: 'procesverbetering',
+    relatedServices: ['werkprocessen', 'dataOpOrde'],
     nl: {
       title: 'Heb je AI nodig, of gewoon een beter proces?',
       excerpt: 'Iedereen heeft het over AI. Maar voor de meeste bedrijven is een simpeler proces veel effectiever dan de nieuwste technologie.',
@@ -76,6 +77,7 @@ const blogPosts = [
     publishedDate: '2026-02-24',
     readTime: 4,
     category: 'procesverbetering',
+    relatedServices: ['werkprocessen'],
     nl: {
       title: 'Procesverbetering zonder Lean of Six Sigma',
       excerpt: 'Je hoeft geen certificaat aan de muur te hebben om je processen te verbeteren. Soms is gezond verstand genoeg.',
@@ -147,6 +149,7 @@ const blogPosts = [
     publishedDate: '2026-03-03',
     readTime: 4,
     category: 'procesverbetering',
+    relatedServices: ['werkprocessen', 'dataOpOrde'],
     nl: {
       title: '5 signalen dat je bedrijfsproces toe is aan verbetering',
       excerpt: 'Niet elk probleem voelt als een probleem. Soms is het gewoon "hoe het hier werkt". Dit zijn de signalen dat het beter kan.',
@@ -234,6 +237,7 @@ const blogPosts = [
     publishedDate: '2026-03-10',
     readTime: 4,
     category: 'digitalisering',
+    relatedServices: ['toolsEnSystemen', 'dataOpOrde'],
     nl: {
       title: 'Waarom digitalisering mislukt bij MKB bedrijven',
       excerpt: 'Niet omdat de technologie niet werkt. Maar omdat niemand begon bij het probleem.',
@@ -324,6 +328,7 @@ export function getBlogPostBySlug(slug, lang = 'nl') {
     publishedDate: post.publishedDate,
     readTime: post.readTime,
     category: post.category,
+    relatedServices: post.relatedServices || [],
     ...post[lang],
   };
 }
@@ -337,6 +342,18 @@ export function getBlogSlugMap() {
     enToNl[post.slugs.en] = post.slugs.nl;
   });
   return { nlToEn, enToNl };
+}
+
+// Helper: get blog posts related to a service key
+export function getRelatedBlogPosts(serviceKey, lang) {
+  return blogPosts
+    .filter((post) => post.relatedServices?.includes(serviceKey))
+    .map((post) => ({
+      slug: post.slugs[lang],
+      title: post[lang].title,
+      excerpt: post[lang].excerpt,
+      readTime: post.readTime,
+    }));
 }
 
 export default blogPosts;

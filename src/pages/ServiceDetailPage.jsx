@@ -4,6 +4,7 @@ import { ArrowRight, ArrowLeft } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTranslation, useLocalizedPath } from '../i18n';
+import { getRelatedBlogPosts } from '../data/blogPosts';
 import MagneticBtn from '../components/MagneticBtn';
 import CTABanner from '../components/CTABanner';
 
@@ -228,6 +229,47 @@ const ServiceDetailPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Blog Posts */}
+      {(() => {
+        const relatedPosts = getRelatedBlogPosts(key, lang);
+        const blogBasePath = lang === 'nl' ? '/blog' : '/en/blog';
+        if (relatedPosts.length === 0) return null;
+        return (
+          <section className="bg-charcoal py-20 px-6 md:px-16 lg:px-24">
+            <div className="max-w-5xl mx-auto">
+              <span className="block font-mono text-xs tracking-widest uppercase text-moss mb-4">
+                {lang === 'nl' ? 'Verder lezen' : 'Further reading'}
+              </span>
+              <h2 className="font-sans font-bold text-2xl md:text-3xl text-cream mb-8 tracking-tight">
+                {lang === 'nl' ? 'Artikelen over dit onderwerp.' : 'Articles on this topic.'}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {relatedPosts.slice(0, 2).map((rp) => (
+                  <Link
+                    key={rp.slug}
+                    to={`${blogBasePath}/${rp.slug}`}
+                    className="group bg-cream/5 border border-cream/10 rounded-[2rem] p-8 hover:bg-cream/10 transition-all duration-300"
+                  >
+                    <span className="block font-mono text-[11px] tracking-widest uppercase text-clay mb-3">
+                      Blog // {rp.readTime} min
+                    </span>
+                    <span className="block font-sans font-bold text-lg text-cream group-hover:text-clay transition-colors duration-300 mb-3 line-clamp-2">
+                      {rp.title}
+                    </span>
+                    <span className="block font-mono text-sm text-cream/40 line-clamp-2">
+                      {rp.excerpt}
+                    </span>
+                    <span className="inline-flex items-center gap-2 mt-4 font-mono text-xs text-clay">
+                      {lang === 'nl' ? 'Lees artikel' : 'Read article'} <ArrowRight size={12} />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* Prev / Next navigation */}
       {(prevKey || nextKey) && (

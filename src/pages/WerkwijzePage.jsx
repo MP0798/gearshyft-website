@@ -1,10 +1,47 @@
+import { useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useTranslation, useLocalizedPath } from '../i18n';
 import MagneticBtn from '../components/MagneticBtn';
 
 const WerkwijzePage = () => {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
   const contactPath = useLocalizedPath('/contact');
+
+  // HowTo schema
+  useEffect(() => {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: lang === 'nl'
+        ? 'Hoe we van probleem naar oplossing komen'
+        : 'How we get from problem to solution',
+      description: t.approachIntro,
+      step: t.approachSteps.map((step, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: step.title,
+        text: step.text,
+      })),
+      provider: {
+        '@type': 'Organization',
+        name: 'GearShyft',
+        url: 'https://gearshyft.nl',
+      },
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'howto-schema';
+    script.textContent = JSON.stringify(schema);
+    const existing = document.getElementById('howto-schema');
+    if (existing) existing.remove();
+    document.head.appendChild(script);
+
+    return () => {
+      const el = document.getElementById('howto-schema');
+      if (el) el.remove();
+    };
+  }, [lang, t]);
 
   return (
     <>

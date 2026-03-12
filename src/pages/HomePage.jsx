@@ -96,7 +96,7 @@ const DiagnosticShufflerCard = () => {
   return (
     <div className="col-span-1 bg-cream border border-charcoal/10 rounded-[2.5rem] p-10 shadow-xl flex flex-col justify-between h-[450px]">
       <div>
-        <h3 className="font-sans font-bold text-2xl mb-2 text-charcoal">{t.card1Title} <br/>{t.card1TitleBreak}</h3>
+        <h2 className="font-sans font-bold text-2xl mb-2 text-charcoal">{t.card1Title} <br/>{t.card1TitleBreak}</h2>
         <p className="font-mono text-sm text-charcoal/60 leading-relaxed mb-8">{t.card1Desc}</p>
       </div>
 
@@ -155,7 +155,7 @@ const TelemetryTypewriterCard = () => {
         <div className="flex items-center gap-3 mb-6 font-mono text-xs text-clay">
           <div className="w-2 h-2 rounded-full bg-clay animate-pulse"></div> {t.card2Badge}
         </div>
-        <h3 className="font-sans font-bold text-2xl mb-2">{t.card2Title} <br/>{t.card2TitleBreak}</h3>
+        <h2 className="font-sans font-bold text-2xl mb-2">{t.card2Title} <br/>{t.card2TitleBreak}</h2>
         <p className="font-mono text-sm text-cream/50 leading-relaxed mb-6 border-l border-moss pl-4">{t.card2Desc}</p>
       </div>
 
@@ -200,7 +200,7 @@ const CursorSchedulerCard = () => {
   return (
     <div className="col-span-1 bg-cream border border-charcoal/10 rounded-[2.5rem] p-10 shadow-xl flex flex-col justify-between h-[450px]">
       <div>
-        <h3 className="font-sans font-bold text-2xl mb-2 text-charcoal">{t.card3Title} <br/>{t.card3TitleBreak}</h3>
+        <h2 className="font-sans font-bold text-2xl mb-2 text-charcoal">{t.card3Title} <br/>{t.card3TitleBreak}</h2>
         <p className="font-mono text-sm text-charcoal/60 leading-relaxed mb-6">{t.card3Desc}</p>
       </div>
 
