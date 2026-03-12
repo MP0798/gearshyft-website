@@ -16,12 +16,31 @@ npm run lint      # ESLint
 
 ```
 src/
-├── App.jsx                  # Alle secties en componenten (single-file SPA)
+├── App.jsx                  # Router setup (BrowserRouter + Routes)
 ├── App.css                  # App-specifieke stijlen (leeg, Tailwind handles alles via index.css)
-├── i18n.jsx                 # Vertalingen NL/EN + LanguageProvider context
+├── i18n.jsx                 # Vertalingen NL/EN + LanguageProvider + useLocalizedPath hook
 ├── i18n.backup.jsx          # Backup vertalingen
 ├── index.css                # Tailwind directives + base styles
 ├── main.jsx                 # React entry point
+├── components/              # Shared componenten
+│   ├── Layout.jsx           # Navbar + Footer + Outlet wrapper
+│   ├── Navbar.jsx           # Floating island nav, scroll-triggered, mobile menu
+│   ├── Footer.jsx           # Footer navigatie + contact info
+│   ├── MagneticBtn.jsx      # Magnetic hover button (supports Link, a, button)
+│   ├── LangSwitch.jsx       # Taalwissel knop (navigeert naar NL/EN equivalent)
+│   ├── CTABanner.jsx        # Herbruikbare CTA banner sectie
+│   └── ScrollToTop.jsx      # Scroll naar top bij route navigatie
+├── hooks/                   # Custom React hooks
+│   └── usePageMeta.js       # Per-page SEO meta tags (title, desc, canonical, hreflang, OG)
+├── pages/                   # Pagina componenten (1 per route)
+│   ├── HomePage.jsx         # Hero + Features + Philosophy + Protocol + CTAs
+│   ├── OverPage.jsx         # Over GearShyft + missie + waarden
+│   ├── DienstenPage.jsx     # Diensten overzicht (links naar sub-services)
+│   ├── ServiceDetailPage.jsx # Herbruikbaar component voor dienst detail pagina's (:slug)
+│   ├── WerkwijzePage.jsx    # Werkwijze/aanpak stappen
+│   ├── ContactPage.jsx      # Contactformulier + email
+│   ├── PrivacyPage.jsx      # Privacyverklaring (was modal, nu pagina)
+│   └── FaqPage.jsx          # Veelgestelde vragen met accordion
 └── remotion/                # Remotion animaties (Protocol sectie)
     ├── BlueprintScanner.jsx     # Stap 01: reticle scant bottlenecks
     ├── BrutalistAssembly.jsx    # Stap 02: blokken assembleren tot dashboard
@@ -29,7 +48,7 @@ src/
     └── *.backup.jsx             # Backups van animaties
 ```
 
-**Geen React Router** - navigatie via anchor links (`#features`, `#philosophy`, `#protocol`, `#contact`).
+**React Router** met tweetalige URL structuur: NL op `/`, EN onder `/en/` prefix.
 
 ## Tech Stack
 
@@ -38,6 +57,7 @@ src/
 - **GSAP 3** + ScrollTrigger (scroll-animaties, parallax, sticky cards)
 - **Remotion 4** + @remotion/player (SVG animaties in browser)
 - **Lucide React** (icons)
+- **React Router 7** (react-router-dom) voor client-side routing
 - **i18n** via custom React Context (`src/i18n.jsx`), geen library
 
 ## Design Tokens
@@ -63,12 +83,33 @@ src/
 
 ## Belangrijke Patronen
 
+### Routing
+- React Router met `BrowserRouter` in `App.jsx`
+- NL routes op root (`/`, `/over`, `/diensten`, etc.)
+- EN routes onder `/en/` prefix (`/en`, `/en/about`, `/en/services`, etc.)
+- `Layout` component wraps alle routes (Navbar + Footer + Outlet)
+- `ScrollToTop` component scrollt naar boven bij route navigatie
+- Vercel SPA fallback in `vercel.json`
+
 ### i18n
-Custom React Context in `src/i18n.jsx`. Gebruik `useTranslation()` hook:
+Custom React Context in `src/i18n.jsx`. Taal wordt bepaald door URL pad:
+- Pad begint met `/en` → Engels
+- Anders → Nederlands
+
 ```jsx
-const { t, lang, setLang } = useTranslation();
+const { t, lang } = useTranslation();
 // t.keyName geeft vertaling terug (property access, geen functie)
+// lang is 'nl' of 'en' (read-only, bepaald door URL)
 ```
+
+Gebruik `useLocalizedPath()` voor taal-bewuste links:
+```jsx
+const contactPath = useLocalizedPath('/contact');
+// Returns '/contact' (NL) of '/en/contact' (EN)
+<Link to={contactPath}>Contact</Link>
+```
+
+`LangSwitch` component navigeert naar het equivalent in de andere taal.
 Alle keys staan in `translations` object met `nl` en `en` sub-objects.
 
 ### Remotion Animaties
@@ -84,29 +125,46 @@ Alle keys staan in `translations` object met `nl` en `en` sub-objects.
 - Protocol sectie: sticky-stacking cards met scale/blur transitions
 - Magnetic button hover via mousemove event tracking
 
-### Componenten
-Alle componenten staan in `App.jsx` (single-file). Render volgorde in `AppContent`:
-- `Navbar` - floating island nav, scroll-triggered styling, mobile hamburger menu overlay
-- `Hero` - full-viewport met GSAP text reveal
-- `Features` - 3 interactieve kaarten (shuffler, typewriter, cursor)
-- `CTABanner` (light) - tussentijdse CTA na Features
-- `Philosophy` - manifesto met parallax + word-by-word reveal
-- `Protocol` - 3 sticky-stacking kaarten met Remotion players
-- `CTABanner` (dark) - tussentijdse CTA na Protocol
-- `SocialProof` - stats (cijfers) + testimonial cards (placeholder content, TODO)
-- `Footer` - contactformulier (Formspree) + email sidebar + footer navigatie
-- `PrivacyModal` - AVG-conforme privacyverklaring als overlay
+### Pagina's & Componenten
+Componenten in `src/components/`, pagina's in `src/pages/`.
+
+**URL Structuur (NL → EN):**
+| NL | EN | Pagina |
+|----|----|--------|
+| `/` | `/en` | HomePage |
+| `/over` | `/en/about` | OverPage |
+| `/diensten` | `/en/services` | DienstenPage |
+| `/diensten/:slug` | `/en/services/:slug` | ServiceDetailPage |
+| `/werkwijze` | `/en/approach` | WerkwijzePage |
+| `/contact` | `/en/contact` | ContactPage |
+| `/privacy` | `/en/privacy` | PrivacyPage |
+| `/faq` | `/en/faq` | FaqPage |
+
+**Diensten sub-pagina's (via :slug param):**
+| NL slug | EN slug | Dienst |
+|---------|---------|--------|
+| `werkprocessen` | `work-processes` | Werkprocessen Verbeteren |
+| `tools-en-systemen` | `tools-and-systems` | Tools & Systemen Bouwen |
+| `data-op-orde` | `data-management` | Data op Orde Brengen |
+
+Elke dienst detail pagina heeft een case-sectie met een echt projectvoorbeeld (caseTitle + caseText in i18n).
+
+**DienstenPage layout:** Procesanalyse balk (breed, niet klikbaar, altijd eerste stap) → pijl connector → 3 diensten kolommen (md:grid-cols-3). "Operationele analyse" is geen losse dienst meer maar onderdeel van de werkwijze.
+
+**HomePage secties:** Hero → Features → CTA → Philosophy → Protocol → CTA
 
 ### Contact & Formulier
-- Contactformulier via Formspree (`action="https://formspree.io/f/xplaceholder"` - TODO: echt ID invullen)
+- Contactformulier via Formsubmit.co op `/contact` pagina
 - Email: `mailto:max@gearshyft.nl`
 - Social links: Twitter/X en LinkedIn (TODO: echte URLs)
-- Privacy link in footer opent PrivacyModal
+- Privacy is nu een aparte pagina (`/privacy`), geen modal meer
 
 ### SEO & Meta
-- `index.html`: lang="nl" (dynamisch bijgewerkt bij taalwissel), meta description, OG tags, Twitter Cards, canonical URL
-- JSON-LD structured data (ProfessionalService schema)
-- `public/robots.txt` + `public/sitemap.xml`
+- Per-page meta tags via `usePageMeta` hook in Layout (title, description, canonical, hreflang, OG, Twitter)
+- Meta config per route in `src/hooks/usePageMeta.js` (niet in i18n)
+- `index.html`: statische fallback meta voor crawlers zonder JS
+- JSON-LD structured data (ProfessionalService + WebSite schema)
+- `public/robots.txt` + `public/sitemap.xml` (22 URLs met xhtml:link hreflang)
 - TODO: favicon vervangen (nog vite.svg), og:image toevoegen
 
 ## Deployment
@@ -115,6 +173,7 @@ Alle componenten staan in `App.jsx` (single-file). Render volgorde in `AppConten
 - **Build:** `npm run build` → `dist/`
 - **GitHub:** https://github.com/MP0798/gearshyft-website.git
 - Pure static SPA, geen backend nodig
+- `vercel.json` met SPA rewrite (alle routes → `index.html`)
 
 ---
 

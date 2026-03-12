@@ -1,9 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
   <url>
     <loc>https://gearshyft.nl/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en" />
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Over / About -->
+  <url>
+    <loc>https://gearshyft.nl/over</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/over" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/about" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/over" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/about" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Diensten / Services -->
+  <url>
+    <loc>https://gearshyft.nl/diensten</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Werkprocessen Verbeteren / Improving Work Processes -->
+  <url>
+    <loc>https://gearshyft.nl/diensten/werkprocessen</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten/werkprocessen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services/work-processes" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/services/work-processes</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten/werkprocessen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services/work-processes" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tools & Systemen Bouwen / Building Tools & Systems -->
+  <url>
+    <loc>https://gearshyft.nl/diensten/tools-en-systemen</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten/tools-en-systemen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services/tools-and-systems" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/services/tools-and-systems</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten/tools-en-systemen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services/tools-and-systems" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Data op Orde / Organizing Your Data -->
+  <url>
+    <loc>https://gearshyft.nl/diensten/data-op-orde</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten/data-op-orde" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services/data-management" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/services/data-management</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/diensten/data-op-orde" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/services/data-management" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Werkwijze / Approach -->
+  <url>
+    <loc>https://gearshyft.nl/werkwijze</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/werkwijze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/approach" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/approach</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/werkwijze" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/approach" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://gearshyft.nl/contact</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/contact" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/contact" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://gearshyft.nl/faq</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/faq" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/faq" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Privacy -->
+  <url>
+    <loc>https://gearshyft.nl/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/privacy" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://gearshyft.nl/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/privacy" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
