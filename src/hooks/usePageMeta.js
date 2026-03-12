@@ -116,6 +116,17 @@ const routeMeta = {
       description: 'We structure your data, build a central database with dashboards, and make sure your numbers are reliable and accessible.',
     },
   },
+  '/blog': {
+    en: '/en/blog',
+    nl: {
+      title: 'Blog | GearShyft - Inzichten uit de Praktijk',
+      description: 'Tips, cases en lessen over procesverbetering. Lees hoe echte bedrijven hun workflows verbeteren zonder jargon.',
+    },
+    en_meta: {
+      title: 'Blog | GearShyft - Insights from Practice',
+      description: 'Tips, cases and lessons on process improvement. Learn how real businesses improve their workflows without the jargon.',
+    },
+  },
 };
 
 // Build reverse lookup: EN path -> NL base key

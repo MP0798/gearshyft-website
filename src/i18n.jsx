@@ -13,6 +13,7 @@ const nlToEn = {
   '/contact': '/en/contact',
   '/privacy': '/en/privacy',
   '/faq': '/en/faq',
+  '/blog': '/en/blog',
 };
 
 // Reverse mapping: EN path -> NL path
@@ -33,6 +34,7 @@ const pathMap = {
   '/contact': { nl: '/contact', en: '/en/contact' },
   '/privacy': { nl: '/privacy', en: '/en/privacy' },
   '/faq': { nl: '/faq', en: '/en/faq' },
+  '/blog': { nl: '/blog', en: '/en/blog' },
 };
 
 const translations = {
@@ -113,11 +115,18 @@ const translations = {
     // Footer
     footerDesc: 'Practical digital solutions for businesses that want their processes to be simpler, clearer, and less frustrating.',
     footerNav: 'Navigation',
-    footerNavItems: ['Services', 'About', 'Approach'],
+    footerNavItems: ['Services', 'About', 'Approach', 'Blog'],
     footerContact: 'Contact',
     footerStatus: 'Available for Projects',
     footerKvk: 'CoC: 91814219',
     footerPrivacy: 'Privacy',
+
+    // Blog
+    blogLabel: 'Blog',
+    blogTitle: 'Insights from Practice',
+    blogIntro: 'Tips, cases and lessons from the field. How real businesses improve their processes, without the jargon.',
+    blogReadMore: 'Read More',
+    blogBackLink: 'Back to Blog',
 
     // Mobile menu
     menuOpen: 'Open menu',
@@ -318,11 +327,18 @@ const translations = {
     // Footer
     footerDesc: 'Praktische digitale oplossingen voor bedrijven die hun processen simpeler, duidelijker en minder frustrerend willen maken.',
     footerNav: 'Navigatie',
-    footerNavItems: ['Diensten', 'Over Ons', 'Werkwijze'],
+    footerNavItems: ['Diensten', 'Over Ons', 'Werkwijze', 'Blog'],
     footerContact: 'Contact',
     footerStatus: 'Beschikbaar voor Projecten',
     footerKvk: 'KvK: 91814219',
     footerPrivacy: 'Privacy',
+
+    // Blog
+    blogLabel: 'Blog',
+    blogTitle: 'Inzichten uit de Praktijk',
+    blogIntro: 'Tips, cases en lessen uit het veld. Hoe echte bedrijven hun processen verbeteren, zonder het jargon.',
+    blogReadMore: 'Lees Meer',
+    blogBackLink: 'Terug naar Blog',
 
     // Mobile menu
     menuOpen: 'Menu openen',

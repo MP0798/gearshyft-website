@@ -20,6 +20,7 @@ const Navbar = () => {
   const werkwijzePath = useLocalizedPath('/werkwijze');
   const dienstenPath = useLocalizedPath('/diensten');
   const overPath = useLocalizedPath('/over');
+  const blogPath = useLocalizedPath('/blog');
   const contactPath = useLocalizedPath('/contact');
 
   // Scroll-triggered navbar styling
@@ -77,6 +78,7 @@ const Navbar = () => {
     { to: overPath, label: t.navAbout },
     { to: dienstenPath, label: t.navServices },
     { to: werkwijzePath, label: t.navApproach },
+    { to: blogPath, label: t.blogLabel },
   ];
 
   return (
