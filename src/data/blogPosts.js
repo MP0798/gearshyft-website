@@ -11,7 +11,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-02-10',
-    readTime: 2,
+    readTime: 4,
     category: 'procesverbetering',
     nl: {
       title: 'Heb je AI nodig, of gewoon een beter proces?',
@@ -19,15 +19,23 @@ const blogPosts = [
       sections: [
         {
           title: 'De AI-hype voorbij',
-          text: 'Elk bedrijf voelt de druk om iets met AI te doen. Maar als je eerlijk kijkt naar waar de meeste tijd verloren gaat, is het antwoord zelden "we missen een AI-tool". Het antwoord is vaker: onduidelijke stappen, dubbel werk, of informatie die op drie plekken tegelijk staat. Dat los je niet op met een chatbot.',
+          text: 'Elk bedrijf voelt de druk om iets met AI te doen. Leveranciers bellen, concurrenten experimenteren, en op LinkedIn lijkt iedereen al halverwege een AI-transformatie. Maar als je eerlijk kijkt naar waar de meeste tijd verloren gaat in je bedrijf, is het antwoord zelden "we missen een AI-tool". Het antwoord is vaker: onduidelijke stappen, dubbel werk, of informatie die op drie plekken tegelijk staat. Mensen die elke week dezelfde vragen aan dezelfde collega stellen. Een proces dat niemand meer kan uitleggen, maar dat iedereen gewoon blijft volgen. Dat los je niet op met een chatbot. Dat los je op door eerst te snappen wat er misgaat.',
+        },
+        {
+          title: 'Een voorbeeld uit de praktijk',
+          text: 'Een bedrijf van 40 man wilde AI inzetten om klantvragen sneller te beantwoorden. Ze hadden gelezen over chatbots, automatische e-mail classificatie en slimme routing. Maar toen we meekeken met het team bleek het echte probleem veel simpeler: klantinformatie stond op vier verschillende plekken. Elke medewerker zocht gemiddeld 12 minuten per vraag naar de juiste gegevens. Dat is geen AI-probleem. Dat is een dataprobleem. We hebben de informatie gecentraliseerd in een simpel dashboard. Geen AI. Geen chatbot. Gemiddelde reactietijd ging van 25 naar 8 minuten.',
         },
         {
           title: 'Wanneer AI wel zin heeft',
-          text: 'AI is geen onzin. Maar het heeft pas zin als je basisprocessen op orde zijn. Als je team elke dag 2 uur kwijt is aan handmatig data overzetten tussen systemen, dan is de oplossing niet een AI die dat sneller doet. De oplossing is dat die stap er niet meer hoeft te zijn. AI wordt pas krachtig als het bovenop een goed proces draait, niet als pleister op een slecht proces.',
+          text: 'AI is geen onzin. Maar het heeft pas zin als je basisprocessen op orde zijn. Als je team elke dag 2 uur kwijt is aan handmatig data overzetten tussen systemen, dan is de oplossing niet een AI die dat sneller doet. De oplossing is dat die stap er niet meer hoeft te zijn. AI wordt pas krachtig als het bovenop een goed proces draait, niet als pleister op een slecht proces. Denk aan patronen herkennen in schone data, voorspellingen maken op basis van betrouwbare cijfers, of repetitieve beslissingen automatiseren waar duidelijke regels voor bestaan. Maar dat vereist allemaal dat de basis klopt.',
+        },
+        {
+          title: 'De kosten van de verkeerde keuze',
+          text: 'Een AI-implementatie kost al snel tienduizenden euros. En dan heb je het nog niet over de tijd van je team, de trainingsdata die schoongemaakt moet worden, en de maanden aan fine-tuning. Als het onderliggende proces rommelig is, automatiseer je rommel. Sneller rommel is nog steeds rommel. Ondertussen had een procesverbetering van een paar weken hetzelfde resultaat kunnen opleveren voor een fractie van de kosten. Niet omdat AI slecht is, maar omdat het probleem geen AI-probleem was.',
         },
         {
           title: 'Begin bij de basis',
-          text: 'Voordat je investeert in AI, stel jezelf drie vragen. Weten we waar de meeste tijd verloren gaat? Kunnen we het probleem uitleggen aan een nieuwe collega in 5 minuten? Is er een simpelere oplossing die we nog niet geprobeerd hebben? In 8 van de 10 gevallen is het antwoord op die laatste vraag ja. En die simpelere oplossing kost een fractie van wat een AI-implementatie kost.',
+          text: 'Voordat je investeert in AI, stel jezelf drie vragen. Weten we waar de meeste tijd verloren gaat? Kunnen we het probleem uitleggen aan een nieuwe collega in 5 minuten? Is er een simpelere oplossing die we nog niet geprobeerd hebben? In 8 van de 10 gevallen is het antwoord op die laatste vraag ja. En die simpelere oplossing kost een fractie van wat een AI-implementatie kost. Soms is de beste technologie geen technologie.',
         },
       ],
     },
@@ -37,15 +45,23 @@ const blogPosts = [
       sections: [
         {
           title: 'Beyond the AI hype',
-          text: 'Every business feels the pressure to do something with AI. But if you honestly look at where most time is wasted, the answer is rarely "we need an AI tool". More often it is: unclear steps, duplicate work, or information scattered across three places. You do not fix that with a chatbot.',
+          text: 'Every business feels the pressure to do something with AI. Vendors are calling, competitors are experimenting, and on LinkedIn everyone seems to be halfway through an AI transformation. But if you honestly look at where most time is wasted in your company, the answer is rarely "we need an AI tool". More often it is: unclear steps, duplicate work, or information scattered across three places. People asking the same colleague the same questions every week. A process nobody can explain anymore, but everyone just keeps following. You do not fix that with a chatbot. You fix that by first understanding what is going wrong.',
+        },
+        {
+          title: 'A real-world example',
+          text: 'A company of 40 people wanted to use AI to answer customer questions faster. They had read about chatbots, automatic email classification, and smart routing. But when we looked at the team, the real problem was much simpler: customer information was stored in four different places. Each employee spent an average of 12 minutes per question searching for the right data. That is not an AI problem. That is a data problem. We centralized the information in a simple dashboard. No AI. No chatbot. Average response time went from 25 to 8 minutes.',
         },
         {
           title: 'When AI actually makes sense',
-          text: 'AI is not nonsense. But it only makes sense when your basic processes are in order. If your team spends 2 hours every day manually transferring data between systems, the solution is not AI that does it faster. The solution is removing that step entirely. AI becomes powerful when it runs on top of a good process, not as a patch on a broken one.',
+          text: 'AI is not nonsense. But it only makes sense when your basic processes are in order. If your team spends 2 hours every day manually transferring data between systems, the solution is not AI that does it faster. The solution is removing that step entirely. AI becomes powerful when it runs on top of a good process, not as a patch on a broken one. Think of recognizing patterns in clean data, making predictions based on reliable numbers, or automating repetitive decisions with clear rules. But all of that requires the foundation to be solid.',
+        },
+        {
+          title: 'The cost of the wrong choice',
+          text: 'An AI implementation easily costs tens of thousands of euros. And that does not include the time from your team, the training data that needs cleaning, and the months of fine-tuning. If the underlying process is messy, you are automating mess. Faster mess is still mess. Meanwhile, a process improvement of a few weeks could have delivered the same result for a fraction of the cost. Not because AI is bad, but because the problem was not an AI problem.',
         },
         {
           title: 'Start with the basics',
-          text: 'Before investing in AI, ask yourself three questions. Do we know where the most time is lost? Can we explain the problem to a new colleague in 5 minutes? Is there a simpler solution we have not tried yet? In 8 out of 10 cases, the answer to that last question is yes. And that simpler solution costs a fraction of what an AI implementation costs.',
+          text: 'Before investing in AI, ask yourself three questions. Do we know where the most time is lost? Can we explain the problem to a new colleague in 5 minutes? Is there a simpler solution we have not tried yet? In 8 out of 10 cases, the answer to that last question is yes. And that simpler solution costs a fraction of what an AI implementation costs. Sometimes the best technology is no technology.',
         },
       ],
     },
@@ -58,7 +74,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-02-24',
-    readTime: 2,
+    readTime: 4,
     category: 'procesverbetering',
     nl: {
       title: 'Procesverbetering zonder Lean of Six Sigma',
@@ -66,15 +82,27 @@ const blogPosts = [
       sections: [
         {
           title: 'Het probleem met frameworks',
-          text: 'Lean, Six Sigma, Kaizen. Er zijn tientallen methodologieen die beloven je processen te verbeteren. Ze hebben allemaal hun waarde. Maar voor een bedrijf van 20 tot 100 mensen zijn ze vaak overkill. Je hebt geen DMAIC-cyclus nodig om te zien dat je team elke maandag 3 uur kwijt is aan dezelfde handmatige rapportage.',
+          text: 'Lean, Six Sigma, Kaizen. Er zijn tientallen methodologieen die beloven je processen te verbeteren. Ik heb Lean zelf geleerd tijdens mijn opleiding, en ik vind het eerlijk gezegd best lightweight. De kernprincipes zijn simpel en praktisch. Maar wat ik in de praktijk zie, is dat bedrijven er iets groots van maken. Er komt een consultant, er worden workshops georganiseerd, er verschijnen value stream maps aan de muur, en voor je het weet is het framework zelf een project geworden. Je hebt geen DMAIC-cyclus nodig om te zien dat je team elke maandag 3 uur kwijt is aan dezelfde handmatige rapportage. En je hebt geen certificaat aan de muur nodig om te concluderen dat een proces van 14 stappen misschien ook in 6 kan. Het probleem is niet Lean zelf. Het probleem is hoe het vaak wordt toegepast: te formeel, te zwaar, en te ver van de werkvloer.',
         },
         {
           title: 'Wat wel werkt',
-          text: 'Loop mee met de mensen die het werk doen. Vraag waar ze tijd aan verliezen. Kijk waar informatie blijft hangen. Dat is geen Lean, dat is luisteren. De beste procesverbeteringen beginnen niet met een framework, maar met een simpele vraag: wat kost jullie elke week de meeste moeite? Het antwoord is bijna altijd verrassend concreet.',
+          text: 'Loop mee met de mensen die het werk doen. Niet een halfuur, maar een hele dag. Vraag waar ze tijd aan verliezen. Kijk waar informatie blijft hangen. Let op de momenten waarop iemand zegt "zo doen we dat hier nu eenmaal". Dat is meestal het punt waar het misgaat. De beste procesverbeteringen beginnen niet met een framework, maar met een simpele vraag: wat kost jullie elke week de meeste moeite? Het antwoord is bijna altijd verrassend concreet. Niet "communicatie kan beter" maar "ik moet elke dinsdag handmatig cijfers uit drie systemen samenvoegen voor het weekrapport". Dat is een probleem dat je kunt fixen.',
+        },
+        {
+          title: 'Een concreet voorbeeld',
+          text: 'Bij een logistiek bedrijf van 60 man klaagde het planningsteam dat ze elke dag minstens een uur kwijt waren aan "brandjes blussen". Klonk als een communicatieprobleem. Maar na een dag meelopen bleek het iets anders: de chauffeurs kregen hun ritten pas om 7:00 uur \'s ochtends door, terwijl de eerste ritten om 7:30 vertrokken. Elke ochtend hetzelfde verhaal: vragen, wijzigingen, onduidelijkheden. De oplossing was niet een communicatietraining of een Lean-workshop. De oplossing was de ritten de avond ervoor delen. Kostte niks. Scheelde een uur per dag.',
+        },
+        {
+          title: 'De rol van je team',
+          text: 'Procesverbetering werkt alleen als de mensen die het proces uitvoeren erbij betrokken zijn. Niet als klankbord achteraf, maar vanaf het begin. Zij weten precies waar het vastloopt. Ze hebben vaak al ideeen voor oplossingen, maar niemand vraagt ernaar. Dit is geen co-creatie workshop met post-its en een facilitator. Dit is gewoon vragen: "Wat zou jij veranderen als je het voor het zeggen had?" En dan ook echt iets met dat antwoord doen. Dat bouwt vertrouwen en zorgt ervoor dat de verbetering ook blijft hangen.',
         },
         {
           title: 'Klein beginnen, snel resultaat',
-          text: 'Je hoeft niet het hele bedrijf om te gooien. Pak een proces dat iedereen irriteert, begrijp waarom het irriteert, en verbeter dat ene ding. Geen projectplan van 40 paginas, geen stuurgroep, geen verandertraject. Gewoon fixen. Als dat werkt, pak je het volgende. Zo bouw je momentum zonder weerstand.',
+          text: 'Je hoeft niet het hele bedrijf om te gooien. Pak een proces dat iedereen irriteert, begrijp waarom het irriteert, en verbeter dat ene ding. Geen projectplan van 40 paginas, geen stuurgroep, geen verandertraject. Gewoon fixen. Als dat werkt, pak je het volgende. Zo bouw je momentum zonder weerstand. En je laat zien dat procesverbetering niet iets is dat maanden duurt en veel geld kost. Het is iets dat volgende week al verschil kan maken.',
+        },
+        {
+          title: 'Wanneer je wel een framework nodig hebt',
+          text: 'Eerlijk is eerlijk: soms is een gestructureerde aanpak wel nodig. Als je een proces wilt verbeteren dat over meerdere afdelingen loopt, met tientallen stappen en afhankelijkheden, dan heb je meer nodig dan gezond verstand. Maar zelfs dan hoef je niet het hele Lean-handboek te volgen. Pak de elementen die nuttig zijn en laat de rest weg. Een framework is een gereedschapskist, geen bijbel.',
         },
       ],
     },
@@ -84,15 +112,27 @@ const blogPosts = [
       sections: [
         {
           title: 'The problem with frameworks',
-          text: 'Lean, Six Sigma, Kaizen. There are dozens of methodologies that promise to improve your processes. They all have their value. But for a company of 20 to 100 people, they are often overkill. You do not need a DMAIC cycle to see that your team spends 3 hours every Monday on the same manual report.',
+          text: 'Lean, Six Sigma, Kaizen. There are dozens of methodologies that promise to improve your processes. I learned Lean myself during my studies, and honestly, I think it is pretty lightweight. The core principles are simple and practical. But what I see in practice is that companies turn it into something big. A consultant comes in, workshops are organized, value stream maps appear on the wall, and before you know it the framework itself has become a project. You do not need a DMAIC cycle to see that your team spends 3 hours every Monday on the same manual report. And you do not need a certificate on the wall to conclude that a 14-step process could probably be done in 6. The problem is not Lean itself. The problem is how it is often applied: too formal, too heavy, and too far from the work floor.',
         },
         {
           title: 'What actually works',
-          text: 'Walk alongside the people who do the work. Ask what wastes their time. See where information gets stuck. That is not Lean, that is listening. The best process improvements do not start with a framework, but with a simple question: what costs you the most effort every week? The answer is almost always surprisingly concrete.',
+          text: 'Walk alongside the people who do the work. Not for half an hour, but for a full day. Ask what wastes their time. See where information gets stuck. Pay attention to the moments when someone says "that is just how we do things here". That is usually where things go wrong. The best process improvements do not start with a framework, but with a simple question: what costs you the most effort every week? The answer is almost always surprisingly concrete. Not "communication could be better" but "every Tuesday I have to manually compile numbers from three systems for the weekly report". That is a problem you can fix.',
+        },
+        {
+          title: 'A concrete example',
+          text: 'At a logistics company of 60 people, the planning team complained they spent at least an hour every day "putting out fires". Sounded like a communication problem. But after spending a day with them, it turned out to be something else: drivers only received their routes at 7:00 AM, while the first routes departed at 7:30. Every morning the same story: questions, changes, confusion. The solution was not a communication training or a Lean workshop. The solution was sharing routes the evening before. Cost nothing. Saved an hour every day.',
+        },
+        {
+          title: 'The role of your team',
+          text: 'Process improvement only works when the people who execute the process are involved. Not as a sounding board after the fact, but from the start. They know exactly where things get stuck. They often already have ideas for solutions, but nobody asks. This is not a co-creation workshop with sticky notes and a facilitator. This is simply asking: "What would you change if it were up to you?" And then actually doing something with that answer. That builds trust and makes sure the improvement actually sticks.',
         },
         {
           title: 'Start small, see results fast',
-          text: 'You do not have to overhaul the entire company. Pick one process that annoys everyone, understand why it annoys them, and fix that one thing. No 40-page project plan, no steering committee, no change program. Just fix it. When that works, pick the next one. That is how you build momentum without resistance.',
+          text: 'You do not have to overhaul the entire company. Pick one process that annoys everyone, understand why it annoys them, and fix that one thing. No 40-page project plan, no steering committee, no change program. Just fix it. When that works, pick the next one. That is how you build momentum without resistance. And you show that process improvement is not something that takes months and costs a fortune. It is something that can make a difference next week.',
+        },
+        {
+          title: 'When you do need a framework',
+          text: 'To be fair: sometimes a structured approach is necessary. If you want to improve a process that spans multiple departments, with dozens of steps and dependencies, you need more than common sense. But even then, you do not have to follow the entire Lean handbook. Take the elements that are useful and leave the rest. A framework is a toolbox, not a bible.',
         },
       ],
     },
@@ -105,7 +145,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-03-03',
-    readTime: 2,
+    readTime: 4,
     category: 'procesverbetering',
     nl: {
       title: '5 signalen dat je bedrijfsproces toe is aan verbetering',
@@ -113,15 +153,35 @@ const blogPosts = [
       sections: [
         {
           title: 'De signalen herkennen',
-          text: 'Sommige procesproblemen zijn onzichtbaar geworden. Ze horen bij "hoe het hier gaat". Maar dat maakt ze niet minder kostbaar. Vijf signalen die je niet moet negeren: mensen vragen steeds dezelfde informatie aan dezelfde persoon. Nieuwe medewerkers doen er weken over om "het systeem" te snappen. Er zijn meer dan drie Excel-bestanden die "de waarheid" bevatten. Klanten vragen regelmatig naar de status van iets. Een simpele wijziging kost meer dan een dag.',
+          text: 'Sommige procesproblemen zijn onzichtbaar geworden. Ze horen bij "hoe het hier gaat". Niemand klaagt meer, want iedereen is eraan gewend. Maar dat maakt ze niet minder kostbaar. Dit zijn vijf signalen die je niet moet negeren.',
+        },
+        {
+          title: 'Signaal 1: Dezelfde vraag, dezelfde persoon',
+          text: 'Als meerdere mensen regelmatig dezelfde informatie vragen aan dezelfde collega, dan is die collega een bottleneck geworden. Niet omdat die persoon slecht is in delen, maar omdat het systeem eromheen niet werkt. De informatie zou beschikbaar moeten zijn zonder dat iemand er telkens naar moet vragen. Dit signaal herken je aan zinnen als "vraag dat maar aan Jan" of "Maria weet hoe dat moet".',
+        },
+        {
+          title: 'Signaal 2: Inwerken duurt te lang',
+          text: 'Als een nieuwe medewerker weken nodig heeft om "het systeem te snappen", dan is er geen systeem. Er is een verzameling gewoontes die nergens vastliggen. Elke collega doet het net even anders, en de nieuwe medewerker moet dat puzzeltje zelf in elkaar leggen. Goed inwerken zou niet meer dan een paar dagen moeten kosten voor de meeste rollen.',
+        },
+        {
+          title: 'Signaal 3: Meer dan drie bronnen van waarheid',
+          text: 'Er zijn meer dan drie Excel-bestanden, systemen of documenten die "de waarheid" bevatten. Niemand weet zeker welke versie de juiste is. Dit leidt tot fouten, dubbel werk, en eindeloos vergelijken. Als je team discussies heeft over welk getal klopt, is dat een signaal dat je datafundament niet op orde is.',
+        },
+        {
+          title: 'Signaal 4: Klanten vragen naar de status',
+          text: 'Als klanten regelmatig zelf moeten bellen of mailen om te vragen waar iets blijft, dan werkt je communicatieproces niet. Het betekent niet dat je team slecht communiceert. Het betekent dat er geen moment in het proces zit waarop de klant automatisch op de hoogte wordt gebracht. Dat is een procesprobleem, geen mensenprobleem.',
+        },
+        {
+          title: 'Signaal 5: Een simpele wijziging kost meer dan een dag',
+          text: 'Als een kleine aanpassing in je werkwijze, systeem of communicatie meer dan een dag kost, dan is je proces te rigide of te verweven met andere processen. Veranderingen zouden niet spannend moeten zijn. Als iedereen zucht bij het idee van een kleine aanpassing, dan is het proces te complex geworden.',
         },
         {
           title: 'De verborgen kosten',
-          text: 'Het lastige aan slechte processen is dat je de kosten niet op een factuur ziet. Het zijn de 15 minuten per persoon per dag die opgeteld weken per jaar worden. Het is de medewerker die vertrekt omdat het werk onnodig frustrerend is. Het is de klant die niet terugkomt omdat de communicatie rommelig was. Die kosten zijn er elke dag, maar niemand telt ze op.',
+          text: 'Het lastige aan slechte processen is dat je de kosten niet op een factuur ziet. Het zijn de 15 minuten per persoon per dag die opgeteld weken per jaar worden. Bij een team van 30 mensen is 15 minuten per dag bijna 200 werkdagen per jaar aan verloren productiviteit. Dat is een fulltime medewerker. Het is ook de medewerker die vertrekt omdat het werk onnodig frustrerend is. De klant die niet terugkomt omdat de communicatie rommelig was. Het vertrouwen dat afbrokkelt omdat niemand zeker weet of de cijfers kloppen. Die kosten zijn er elke dag, maar niemand telt ze op.',
         },
         {
           title: 'Wat je eraan kunt doen',
-          text: 'Herken je drie of meer van deze signalen? Dan is je proces toe aan een revisie. Niet een grote reorganisatie, maar een nuchter gesprek over wat beter kan. Begin met de mensen die het werk doen. Zij weten precies waar het vastloopt. De oplossing is vaak simpeler dan je denkt.',
+          text: 'Herken je drie of meer van deze signalen? Dan is je proces toe aan een revisie. Niet een grote reorganisatie, maar een nuchter gesprek over wat beter kan. Begin met de mensen die het werk doen. Zij weten precies waar het vastloopt. De eerste stap is simpel: loop een dag mee met je team en noteer elk moment waarop iemand iets doet dat onnodig complex, dubbel of frustrerend is. De oplossing is vaak simpeler dan je denkt.',
         },
       ],
     },
@@ -131,15 +191,35 @@ const blogPosts = [
       sections: [
         {
           title: 'Recognizing the signs',
-          text: 'Some process problems have become invisible. They are part of "how things work here". But that does not make them less costly. Five signs you should not ignore: people keep asking the same person for the same information. New employees take weeks to understand "the system". There are more than three Excel files that contain "the truth". Clients regularly ask for status updates. A simple change takes more than a day.',
+          text: 'Some process problems have become invisible. They are part of "how things work here". Nobody complains anymore, because everyone is used to it. But that does not make them less costly. These are five signs you should not ignore.',
+        },
+        {
+          title: 'Sign 1: Same question, same person',
+          text: 'When multiple people regularly ask the same colleague for the same information, that colleague has become a bottleneck. Not because they are bad at sharing, but because the system around them does not work. The information should be available without someone having to ask for it every time. You recognize this sign from phrases like "just ask John" or "Maria knows how that works".',
+        },
+        {
+          title: 'Sign 2: Onboarding takes too long',
+          text: 'If a new employee needs weeks to "understand the system", there is no system. There is a collection of habits that are not documented anywhere. Every colleague does things slightly differently, and the new hire has to figure out the puzzle on their own. Proper onboarding should not take more than a few days for most roles.',
+        },
+        {
+          title: 'Sign 3: More than three sources of truth',
+          text: 'There are more than three Excel files, systems, or documents that contain "the truth". Nobody knows for sure which version is correct. This leads to errors, duplicate work, and endless comparing. If your team has discussions about which number is right, that is a sign your data foundation is not in order.',
+        },
+        {
+          title: 'Sign 4: Clients ask for status updates',
+          text: 'When clients regularly have to call or email to ask where something is, your communication process is not working. It does not mean your team communicates poorly. It means there is no point in the process where the client is automatically kept informed. That is a process problem, not a people problem.',
+        },
+        {
+          title: 'Sign 5: A simple change takes more than a day',
+          text: 'If a small adjustment to your workflow, system, or communication takes more than a day, your process is too rigid or too intertwined with other processes. Changes should not be a big deal. If everyone sighs at the idea of a small adjustment, the process has become too complex.',
         },
         {
           title: 'The hidden costs',
-          text: 'The tricky thing about bad processes is that you do not see the costs on an invoice. It is the 15 minutes per person per day that add up to weeks per year. It is the employee who leaves because the work is unnecessarily frustrating. It is the client who does not come back because communication was messy. Those costs are there every day, but nobody adds them up.',
+          text: 'The tricky thing about bad processes is that you do not see the costs on an invoice. It is the 15 minutes per person per day that add up to weeks per year. In a team of 30 people, 15 minutes per day amounts to almost 200 working days per year of lost productivity. That is a full-time employee. It is also the employee who leaves because the work is unnecessarily frustrating. The client who does not come back because communication was messy. The trust that erodes because nobody is sure the numbers are right. Those costs are there every day, but nobody adds them up.',
         },
         {
           title: 'What you can do about it',
-          text: 'Do you recognize three or more of these signs? Then your process needs a revision. Not a big reorganization, but an honest conversation about what can be better. Start with the people who do the work. They know exactly where things get stuck. The solution is often simpler than you think.',
+          text: 'Do you recognize three or more of these signs? Then your process needs a revision. Not a big reorganization, but an honest conversation about what can be better. Start with the people who do the work. They know exactly where things get stuck. The first step is simple: spend a day with your team and note every moment someone does something unnecessarily complex, redundant, or frustrating. The solution is often simpler than you think.',
         },
       ],
     },
@@ -152,7 +232,7 @@ const blogPosts = [
     },
     author: 'Max Poppes',
     publishedDate: '2026-03-10',
-    readTime: 2,
+    readTime: 4,
     category: 'digitalisering',
     nl: {
       title: 'Waarom digitalisering mislukt bij MKB bedrijven',
@@ -160,15 +240,27 @@ const blogPosts = [
       sections: [
         {
           title: 'De oplossing voor de oplossing',
-          text: 'Het patroon is herkenbaar. Een bedrijf koopt software. De implementatie duurt langer dan gepland. Het team werkt er half mee, half omheen. Na een jaar staat het systeem er, maar werkt niemand zoals bedoeld. Het probleem? Niemand heeft eerst gevraagd welk probleem we eigenlijk oplossen. De software werd gekozen op basis van features, niet op basis van het werkproces.',
+          text: 'Het patroon is herkenbaar. Een bedrijf koopt software. De implementatie duurt langer dan gepland. Het team werkt er half mee, half omheen. Na een jaar staat het systeem er, maar werkt niemand zoals bedoeld. Na twee jaar gebruikt de helft van het team weer Excel ernaast. Het probleem? Niemand heeft eerst gevraagd welk probleem we eigenlijk oplossen. De software werd gekozen op basis van features, niet op basis van het werkproces. De demo zag er goed uit. De salesrep was overtuigend. Maar niemand heeft gekeken of de software past bij hoe het team echt werkt.',
+        },
+        {
+          title: 'Het patroon dat steeds terugkomt',
+          text: 'Bij bijna elk mislukt digitaliseringstraject zien we hetzelfde patroon. Er is een vaag gevoel dat "het beter moet". Iemand zoekt een tool die dat oplost. De tool wordt gekozen op basis van features en demos. De implementatie is lastiger dan verwacht. Het team past zich aan de tool aan in plaats van andersom. Na een jaar werkt niemand zoals bedoeld. Het probleem zit in het begin. "Het moet beter" is geen goede start. Wat precies moet beter? Voor wie? Waarom gaat het nu fout? Zonder die antwoorden kies je blind.',
         },
         {
           title: 'Technologie is niet het startpunt',
-          text: 'Digitalisering begint niet bij technologie. Het begint bij begrijpen hoe het werk nu gedaan wordt, en waarom. Pas als je dat snapt, kun je beslissen welke technologie past. Soms is dat een volledige softwareoplossing. Soms is het een simpele aanpassing in hoe informatie gedeeld wordt. En soms is de conclusie dat je helemaal geen nieuwe software nodig hebt.',
+          text: 'Digitalisering begint niet bij technologie. Het begint bij begrijpen hoe het werk nu gedaan wordt, en waarom. Niet hoe het zou moeten volgens het management, maar hoe het echt gaat op de werkvloer. Pas als je dat snapt, kun je beslissen welke technologie past. Soms is dat een volledige softwareoplossing. Soms is het een simpele aanpassing in hoe informatie gedeeld wordt. En soms is de conclusie dat je helemaal geen nieuwe software nodig hebt, maar dat je bestaande tools anders moet inrichten.',
+        },
+        {
+          title: 'Drie vragen voor je begint',
+          text: 'Voordat je een euro uitgeeft aan nieuwe software, beantwoord deze drie vragen. Wat is het concrete probleem? Niet "communicatie kan beter" maar "het duurt gemiddeld 3 dagen voordat een klantverzoek bij de juiste persoon terechtkomt." Wie heeft er last van? Het team dat het werk doet? De klant? Het management dat geen overzicht heeft? Dit bepaalt waar de oplossing moet zitten. En als laatste: wat hebben jullie al geprobeerd? Vaak zijn er al workarounds die bijna werken. Soms is de beste oplossing die workaround officieel maken en verbeteren.',
         },
         {
           title: 'Hoe het wel werkt',
-          text: 'Succesvolle digitalisering bij MKB bedrijven volgt bijna altijd hetzelfde patroon. Klein beginnen. Een concreet probleem aanpakken. De mensen die het werk doen erbij betrekken. Testen of het werkt in de praktijk. Dan pas uitbreiden. Geen big bang, geen groot IT-project. Gewoon stap voor stap verbeteren, met technologie die past bij hoe jullie werken.',
+          text: 'Succesvolle digitalisering bij MKB-bedrijven volgt bijna altijd hetzelfde patroon. Klein beginnen. Een concreet probleem aanpakken. De mensen die het werk doen erbij betrekken. Testen of het werkt in de praktijk. Dan pas uitbreiden. Geen big bang, geen groot IT-project. Gewoon stap voor stap verbeteren, met technologie die past bij hoe jullie werken. De eerste verbetering hoeft geen maanden te duren. Begin met het proces dat het meeste frustratie oplevert, en los dat op. Als het team ziet dat het werkt, krijg je draagvlak voor de volgende stap.',
+        },
+        {
+          title: 'Wanneer software wel de juiste keuze is',
+          text: 'Niet elke digitalisering mislukt. Software is wel de juiste keuze als je precies weet welk probleem je oplost, als het team betrokken is bij de keuze, en als je bereid bent het werkproces aan te passen waar dat logisch is. De sleutel is: kies software op basis van je proces, niet andersom. En begin met een pilot. Niet met een bedrijfsbrede uitrol op dag een.',
         },
       ],
     },
@@ -178,15 +270,27 @@ const blogPosts = [
       sections: [
         {
           title: 'The solution before the problem',
-          text: 'The pattern is familiar. A company buys software. Implementation takes longer than planned. The team half uses it, half works around it. After a year, the system is there, but nobody works as intended. The problem? Nobody first asked which problem we are actually solving. The software was chosen based on features, not on the work process.',
+          text: 'The pattern is familiar. A company buys software. Implementation takes longer than planned. The team half uses it, half works around it. After a year, the system is there, but nobody works as intended. After two years, half the team is back to using Excel on the side. The problem? Nobody first asked which problem we are actually solving. The software was chosen based on features, not on the work process. The demo looked great. The sales rep was convincing. But nobody checked whether the software fits how the team actually works.',
+        },
+        {
+          title: 'The pattern that keeps repeating',
+          text: 'In almost every failed digitalization effort, we see the same pattern. There is a vague feeling that "things need to be better". Someone looks for a tool to fix it. The tool is chosen based on features and demos. Implementation is harder than expected. The team adapts to the tool instead of the other way around. After a year, nobody works as intended. The problem is at the start. "It needs to be better" is not a good starting point. What exactly needs to be better? For whom? Why is it going wrong now? Without those answers, you are choosing blindly.',
         },
         {
           title: 'Technology is not the starting point',
-          text: 'Digitalization does not start with technology. It starts with understanding how the work gets done today, and why. Only when you understand that can you decide which technology fits. Sometimes that is a full software solution. Sometimes it is a simple change in how information is shared. And sometimes the conclusion is that you do not need new software at all.',
+          text: 'Digitalization does not start with technology. It starts with understanding how the work gets done today, and why. Not how it should be done according to management, but how it actually happens on the work floor. Only when you understand that can you decide which technology fits. Sometimes that is a full software solution. Sometimes it is a simple change in how information is shared. And sometimes the conclusion is that you do not need new software at all, but that your existing tools need to be set up differently.',
+        },
+        {
+          title: 'Three questions before you start',
+          text: 'Before spending a single euro on new software, answer these three questions. What is the concrete problem? Not "communication could be better" but "it takes an average of 3 days before a client request reaches the right person." Who is affected? The team doing the work? The client? Management lacking oversight? This determines where the solution needs to be. And finally: what have you already tried? Often there are workarounds that almost work. Sometimes the best solution is to make that workaround official and improve it.',
         },
         {
           title: 'How it actually works',
-          text: 'Successful digitalization at SME businesses almost always follows the same pattern. Start small. Tackle a concrete problem. Involve the people who do the work. Test whether it works in practice. Then expand. No big bang, no large IT project. Just improve step by step, with technology that fits how you work.',
+          text: 'Successful digitalization at SME businesses almost always follows the same pattern. Start small. Tackle a concrete problem. Involve the people who do the work. Test whether it works in practice. Then expand. No big bang, no large IT project. Just improve step by step, with technology that fits how you work. The first improvement does not have to take months. Start with the process that causes the most frustration, and fix that. When the team sees it works, you get buy-in for the next step.',
+        },
+        {
+          title: 'When software is the right choice',
+          text: 'Not every digitalization fails. Software is the right choice when you know exactly which problem you are solving, when the team is involved in the selection, and when you are willing to adjust the work process where it makes sense. The key is: choose software based on your process, not the other way around. And start with a pilot. Not with a company-wide rollout on day one.',
         },
       ],
     },
