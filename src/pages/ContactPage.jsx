@@ -71,6 +71,7 @@ const ContactPage = () => {
                 <CheckCircle size={48} className="text-moss mb-6" />
                 <h2 className="font-sans font-bold text-2xl text-cream mb-3">{t.contactSuccessTitle}</h2>
                 <p className="font-mono text-sm text-cream/60">{t.contactSuccessText}</p>
+                <p className="font-mono text-xs text-cream/40 mt-4">{t.contactSpamNote}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
