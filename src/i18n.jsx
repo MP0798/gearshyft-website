@@ -161,14 +161,50 @@ const translations = {
     // About Page
     aboutLabel: 'About GearShyft',
     aboutTitle: 'Process first, technology second.',
-    aboutIntro: 'GearShyft helps growing businesses fix their processes. Not with more tools, but with practical solutions that fit how your team actually works.',
-    aboutMissionTitle: 'Why GearShyft exists',
-    aboutMissionText: 'Too many businesses struggle with outdated, manual, or overly complex processes. They know something needs to change, but not where to start. GearShyft bridges that gap. We understand your operations, find the friction, and build solutions that actually stick.',
+    aboutIntro: 'GearShyft helps businesses fix their processes. Not with more tools, but with practical solutions that fit how your team actually works.',
+
+    // Gear metaphor statement
+    aboutGearLine1: 'Your engine doesn\'t work harder.',
+    aboutGearLine2: 'You just go',
+    aboutGearHighlight: 'faster.',
+    aboutGearDesc: 'In a higher gear, you get more out of the same RPM. Less effort, more output. That\'s GearShyft.',
+
+    // About Max
+    aboutMaxLabel: 'The person behind GearShyft',
+    aboutMaxName: 'Max Poppes',
+    aboutMaxRole: 'Founder',
+    aboutMaxBio: 'Background in entrepreneurship, always drawn to technology and making things simpler. Experience across SaaS, data, and energy. In every role, the same thing stood out: there was always room for a more efficient way. That\'s what I dig into.',
+    aboutMaxQuote: 'Call me lazy. I\'d rather do it smart.',
+    aboutMaxOrigin: 'After finishing my studies and several internships, the same thing kept coming back: improving or building solutions. No more doubt, that became GearShyft.',
+
+    // What GearShyft is (and isn't)
+    aboutIdentityTitle: 'What GearShyft is',
+    aboutIdentityIs: [
+      'A practical builder who makes processes work better',
+      'Someone who honestly assesses what\'s needed',
+      'A partner who implements, not just advises',
+    ],
+    aboutIdentityIsNotTitle: 'And what it\'s not',
+    aboutIdentityIsNot: [
+      'Not a consultancy that only delivers slides',
+      'Not an AI agency that slaps AI on everything',
+      'Not a software shop that pushes technology',
+    ],
+
+    // How we work (values)
     aboutValuesTitle: 'How we work',
     aboutValues: [
-      { title: 'Process first', text: 'We understand the problem before picking a solution. Technology is a tool, not the starting point.' },
-      { title: 'Build, not advise', text: 'We deliver working solutions, not decks and reports. You get something you can use tomorrow.' },
-      { title: 'With your people', text: 'The best solutions come from the people who do the work. We build together with your team.' },
+      { title: 'Process first', text: 'We understand the problem before picking a solution. Technology is a tool, not the starting point.', number: '01' },
+      { title: 'Build, not advise', text: 'We deliver working solutions, not decks and reports. You get something you can use tomorrow.', number: '02' },
+      { title: 'With your people', text: 'The best solutions come from the people who do the work. We build together with your team.', number: '03' },
+    ],
+
+    // What to expect
+    aboutExpectTitle: 'What to expect',
+    aboutExpectItems: [
+      { title: 'Short lines', text: 'No layers, no lead time. Direct contact, fast decisions.' },
+      { title: 'Direct impact', text: 'No months-long programs. We focus on what makes the biggest difference right now.' },
+      { title: 'No nonsense', text: 'No buzzwords, no unnecessary complexity. Just solutions that work.' },
     ],
     aboutCta: 'Get in Touch',
 
@@ -380,14 +416,50 @@ const translations = {
     // About Page
     aboutLabel: 'Over GearShyft',
     aboutTitle: 'Proces eerst, technologie tweede.',
-    aboutIntro: 'GearShyft helpt groeiende bedrijven hun processen te verbeteren. Niet met meer tools, maar met praktische oplossingen die passen bij hoe jullie team echt werkt.',
-    aboutMissionTitle: 'Waarom GearShyft bestaat',
-    aboutMissionText: 'Te veel bedrijven worstelen met verouderde, handmatige of onnodig complexe processen. Ze weten dat er iets moet veranderen, maar niet waar te beginnen. GearShyft overbrugt die kloof. We begrijpen jullie operatie, vinden de frictie en bouwen oplossingen die echt blijven werken.',
+    aboutIntro: 'GearShyft helpt bedrijven hun processen te verbeteren. Niet met meer tools, maar met praktische oplossingen die passen bij hoe jullie team echt werkt.',
+
+    // Gear metaphor statement
+    aboutGearLine1: 'Je motor draait niet harder.',
+    aboutGearLine2: 'Je gaat wel',
+    aboutGearHighlight: 'sneller.',
+    aboutGearDesc: 'In een hogere versnelling haal je meer uit dezelfde toeren. Minder moeite, meer resultaat. Dat is GearShyft.',
+
+    // About Max
+    aboutMaxLabel: 'De persoon achter GearShyft',
+    aboutMaxName: 'Max Poppes',
+    aboutMaxRole: 'Oprichter',
+    aboutMaxBio: 'Opleiding in ondernemerschap, altijd geinteresseerd in techniek en het leven simpeler maken. Ervaring in SaaS, data en energie. Bij elke ervaring viel hetzelfde op: er kon altijd een efficientieslag gemaakt worden. Dat is waar ik me in vastbijt.',
+    aboutMaxQuote: 'Noem me lui. Ik doe het liever slim.',
+    aboutMaxOrigin: 'Na mijn studie en meerdere stages kwam steeds hetzelfde terug: het verbeteren of bouwen van oplossingen. Geen twijfel meer, dat werd GearShyft.',
+
+    // What GearShyft is (and isn't)
+    aboutIdentityTitle: 'Wat GearShyft is',
+    aboutIdentityIs: [
+      'Een praktische bouwer die processen beter werkend maakt',
+      'Iemand die eerlijk kijkt naar wat nodig is',
+      'Een partner die implementeert, niet alleen adviseert',
+    ],
+    aboutIdentityIsNotTitle: 'En wat het niet is',
+    aboutIdentityIsNot: [
+      'Geen adviesbureau dat alleen slides levert',
+      'Geen AI-agency die overal AI op plakt',
+      'Geen softwarebureau dat technologie pusht',
+    ],
+
+    // How we work (values)
     aboutValuesTitle: 'Hoe wij werken',
     aboutValues: [
-      { title: 'Proces eerst', text: 'We begrijpen het probleem voordat we een oplossing kiezen. Technologie is een middel, niet het startpunt.' },
-      { title: 'Bouwen, niet adviseren', text: 'We leveren werkende oplossingen, geen decks en rapporten. Je krijgt iets dat je morgen kunt gebruiken.' },
-      { title: 'Met jullie mensen', text: 'De beste oplossingen komen van de mensen die het werk doen. We bouwen samen met jullie team.' },
+      { title: 'Proces eerst', text: 'We begrijpen het probleem voordat we een oplossing kiezen. Technologie is een middel, niet het startpunt.', number: '01' },
+      { title: 'Bouwen, niet adviseren', text: 'We leveren werkende oplossingen, geen decks en rapporten. Je krijgt iets dat je morgen kunt gebruiken.', number: '02' },
+      { title: 'Met jullie mensen', text: 'De beste oplossingen komen van de mensen die het werk doen. We bouwen samen met jullie team.', number: '03' },
+    ],
+
+    // What to expect
+    aboutExpectTitle: 'Wat je kunt verwachten',
+    aboutExpectItems: [
+      { title: 'Korte lijnen', text: 'Geen lagen, geen doorlooptijd. Direct contact, snelle beslissingen.' },
+      { title: 'Directe impact', text: 'Geen maandenlange trajecten. We focussen op wat nu het meeste verschil maakt.' },
+      { title: 'Geen onzin', text: 'Geen buzzwords, geen onnodige complexiteit. Gewoon oplossingen die werken.' },
     ],
     aboutCta: 'Neem Contact Op',
 

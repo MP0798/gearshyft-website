@@ -38,7 +38,7 @@ src/
 │   └── blogPosts.js         # Blog posts NL/EN met metadata + helpers
 ├── pages/                   # Pagina componenten (1 per route)
 │   ├── HomePage.jsx         # Hero + Features + Philosophy + Protocol + CTAs
-│   ├── OverPage.jsx         # Over GearShyft + missie + waarden
+│   ├── OverPage.jsx         # Over GearShyft: gear-metafoor, over Max, identiteit, waarden, verwachtingen
 │   ├── DienstenPage.jsx     # Diensten overzicht (links naar sub-services)
 │   ├── ServiceDetailPage.jsx # Herbruikbaar component voor dienst detail pagina's (:slug)
 │   ├── BlogIndexPage.jsx    # Blog overzicht met post listing
@@ -162,6 +162,8 @@ Elke dienst detail pagina heeft een case-sectie met een echt projectvoorbeeld (c
 **DienstenPage layout:** Procesanalyse balk (breed, niet klikbaar, altijd eerste stap) → pijl connector → 3 diensten kolommen (md:grid-cols-3). "Operationele analyse" is geen losse dienst meer maar onderdeel van de werkwijze.
 
 **HomePage secties:** Hero → Features → CTA → Philosophy → Protocol → CTA
+
+**OverPage secties:** Hero → Gear Statement (naam-metafoor) → Over Max (foto + bio + quote) → Identity (wel/niet cards) → Values (01/02/03) → Expectations → CTA Banner
 
 ### Contact & Formulier
 - Contactformulier via Vercel serverless function (`api/contact.js`) + Resend API
