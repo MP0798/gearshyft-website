@@ -59,6 +59,19 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'Failed to send email' });
     }
 
+    // Autoresponder to the visitor
+    await resend.emails.send({
+      from: 'Max van GearShyft <noreply@gearshyft.nl>',
+      to: [email],
+      replyTo: 'max@gearshyft.nl',
+      subject: 'Bedankt voor je bericht',
+      html: `
+        <p>Hi ${name},</p>
+        <p>Bedankt voor je bericht via gearshyft.nl. Ik neem binnen een werkdag contact met je op.</p>
+        <p>Groet,<br>Max Poppes<br>GearShyft</p>
+      `,
+    });
+
     return res.status(200).json({ success: true });
   } catch {
     return res.status(500).json({ error: 'Failed to send email' });
