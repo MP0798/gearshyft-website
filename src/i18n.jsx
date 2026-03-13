@@ -227,7 +227,7 @@ const translations = {
     aboutMaxName: 'Max Poppes',
     aboutMaxRole: 'Founder',
     aboutMaxBio: 'Background in entrepreneurship, always drawn to technology and making things simpler. Experience across SaaS, data, and energy. In every role, the same thing stood out: there was always room for a more efficient way. That\'s what I dig into.',
-    aboutMaxQuote: 'Call me lazy. I\'d rather do it smart.',
+    aboutMaxQuote: 'I\'d rather build something smart than do the same thing every day.',
     aboutMaxOrigin: 'After finishing my studies and several internships, the same thing kept coming back: improving or building solutions. No more doubt, that became GearShyft.',
 
     // What GearShyft is (and isn't)
@@ -546,7 +546,7 @@ const translations = {
     aboutMaxName: 'Max Poppes',
     aboutMaxRole: 'Oprichter',
     aboutMaxBio: 'Opleiding in ondernemerschap, altijd geinteresseerd in techniek en het leven simpeler maken. Ervaring in SaaS, data en energie. Bij elke ervaring viel hetzelfde op: er kon altijd een efficientieslag gemaakt worden. Dat is waar ik me in vastbijt.',
-    aboutMaxQuote: 'Noem me lui. Ik doe het liever slim.',
+    aboutMaxQuote: 'Ik bouw liever iets slims dan dat ik elke dag hetzelfde doe.',
     aboutMaxOrigin: 'Na mijn studie en meerdere stages kwam steeds hetzelfde terug: het verbeteren of bouwen van oplossingen. Geen twijfel meer, dat werd GearShyft.',
 
     // What GearShyft is (and isn't)
