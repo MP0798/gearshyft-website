@@ -38,8 +38,7 @@ const Footer = () => {
             <h5 className="uppercase tracking-widest text-clay mb-6">{t.footerContact}</h5>
             <ul className="space-y-4">
               <li><a href="mailto:max@gearshyft.nl" className="hover:text-cream transition-colors">max@gearshyft.nl</a></li>
-              <li><a href="https://x.com/gearshyft" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">Twitter (X)</a></li>
-              <li><a href="https://linkedin.com/company/gearshyft" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/company/gearshyft/" target="_blank" rel="noopener noreferrer" className="hover:text-cream transition-colors">LinkedIn</a></li>
             </ul>
           </div>
         </div>
