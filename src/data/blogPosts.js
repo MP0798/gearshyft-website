@@ -20,7 +20,7 @@ const blogPosts = [
       sections: [
         {
           title: 'De AI-hype voorbij',
-          text: 'Elk bedrijf voelt de druk om iets met AI te doen. Leveranciers bellen, concurrenten experimenteren, en op LinkedIn lijkt iedereen al halverwege een AI-transformatie. Maar als je eerlijk kijkt naar waar de meeste tijd verloren gaat in je bedrijf, is het antwoord zelden "we missen een AI-tool". Het antwoord is vaker: onduidelijke stappen, dubbel werk, of informatie die op drie plekken tegelijk staat. Mensen die elke week dezelfde vragen aan dezelfde collega stellen. Een proces dat niemand meer kan uitleggen, maar dat iedereen gewoon blijft volgen. Dat los je niet op met een chatbot. Dat los je op door eerst te snappen wat er misgaat.',
+          text: 'Elk bedrijf voelt de druk om iets met AI te doen. Leveranciers bellen, concurrenten experimenteren, en op LinkedIn lijkt iedereen al halverwege een AI-transformatie. Maar als je eerlijk kijkt naar waar de meeste tijd verloren gaat in je bedrijf, is het antwoord zelden "we missen een AI-tool". Het antwoord is vaker: onduidelijke stappen, dubbel werk, of informatie die op drie plekken tegelijk staat. Volgens onderzoek van Eagle Hill Consulting besteedt 68% van werknemers regelmatig tijd aan inefficiente, laagwaardige taken. Mensen die elke week dezelfde vragen aan dezelfde collega stellen. Een proces dat niemand meer kan uitleggen, maar dat iedereen gewoon blijft volgen. Dat los je niet op met een chatbot. Dat los je op door eerst te snappen wat er misgaat.',
         },
         {
           title: 'Een voorbeeld uit de praktijk',
@@ -32,12 +32,16 @@ const blogPosts = [
         },
         {
           title: 'De kosten van de verkeerde keuze',
-          text: 'Een AI-implementatie kost al snel tienduizenden euros. En dan heb je het nog niet over de tijd van je team, de trainingsdata die schoongemaakt moet worden, en de maanden aan fine-tuning. Als het onderliggende proces rommelig is, automatiseer je rommel. Sneller rommel is nog steeds rommel. Ondertussen had een procesverbetering van een paar weken hetzelfde resultaat kunnen opleveren voor een fractie van de kosten. Niet omdat AI slecht is, maar omdat het probleem geen AI-probleem was.',
+          text: 'Volgens onderzoek van SmartDev kost een AI-implementatie voor MKB-bedrijven al snel $200.000 tot $500.000 over vijf jaar, waarbij softwarelicenties slechts 30-50% van de totale kosten uitmaken. En dan heb je het nog niet over de tijd van je team en de maanden aan fine-tuning. Als het onderliggende proces rommelig is, automatiseer je rommel. Sneller rommel is nog steeds rommel. Ondertussen had een procesverbetering van een paar weken hetzelfde resultaat kunnen opleveren voor een fractie van de kosten. Niet omdat AI slecht is, maar omdat het probleem geen AI-probleem was.',
         },
         {
           title: 'Begin bij de basis',
-          text: 'Voordat je investeert in AI, stel jezelf drie vragen. Weten we waar de meeste tijd verloren gaat? Kunnen we het probleem uitleggen aan een nieuwe collega in 5 minuten? Is er een simpelere oplossing die we nog niet geprobeerd hebben? In 8 van de 10 gevallen is het antwoord op die laatste vraag ja. En die simpelere oplossing kost een fractie van wat een AI-implementatie kost. Soms is de beste technologie geen technologie.',
+          text: 'Voordat je investeert in AI, stel jezelf drie vragen. Weten we waar de meeste tijd verloren gaat? Kunnen we het probleem uitleggen aan een nieuwe collega in 5 minuten? Is er een simpelere oplossing die we nog niet geprobeerd hebben? Vaak is het antwoord op die laatste vraag ja. En die simpelere oplossing kost een fractie van wat een AI-implementatie kost. Soms is de beste technologie geen technologie.',
         },
+      ],
+      sources: [
+        { label: 'Eagle Hill Consulting - Workers spend time on low-value, inefficient tasks (2023)', url: 'https://www.eaglehillconsulting.com/news/workers-say-they-regularly-spend-time-on-low-value-inefficient-tasks/' },
+        { label: 'SmartDev - True Cost of Generative AI for SMEs: 5-Year Breakdown', url: 'https://smartdev.com/gen-ai-implementation-cost-sme/' },
       ],
     },
     en: {
@@ -46,7 +50,7 @@ const blogPosts = [
       sections: [
         {
           title: 'Beyond the AI hype',
-          text: 'Every business feels the pressure to do something with AI. Vendors are calling, competitors are experimenting, and on LinkedIn everyone seems to be halfway through an AI transformation. But if you honestly look at where most time is wasted in your company, the answer is rarely "we need an AI tool". More often it is: unclear steps, duplicate work, or information scattered across three places. People asking the same colleague the same questions every week. A process nobody can explain anymore, but everyone just keeps following. You do not fix that with a chatbot. You fix that by first understanding what is going wrong.',
+          text: 'Every business feels the pressure to do something with AI. Vendors are calling, competitors are experimenting, and on LinkedIn everyone seems to be halfway through an AI transformation. But if you honestly look at where most time is wasted in your company, the answer is rarely "we need an AI tool". More often it is: unclear steps, duplicate work, or information scattered across three places. According to Eagle Hill Consulting research, 68% of workers regularly spend time on low-value, inefficient tasks. People asking the same colleague the same questions every week. A process nobody can explain anymore, but everyone just keeps following. You do not fix that with a chatbot. You fix that by first understanding what is going wrong.',
         },
         {
           title: 'A real-world example',
@@ -58,20 +62,24 @@ const blogPosts = [
         },
         {
           title: 'The cost of the wrong choice',
-          text: 'An AI implementation easily costs tens of thousands of euros. And that does not include the time from your team, the training data that needs cleaning, and the months of fine-tuning. If the underlying process is messy, you are automating mess. Faster mess is still mess. Meanwhile, a process improvement of a few weeks could have delivered the same result for a fraction of the cost. Not because AI is bad, but because the problem was not an AI problem.',
+          text: 'According to SmartDev research, an AI implementation for SMEs costs $200,000 to $500,000 over five years, with software licences making up just 30-50% of total costs. And that does not include the time from your team and the months of fine-tuning. If the underlying process is messy, you are automating mess. Faster mess is still mess. Meanwhile, a process improvement of a few weeks could have delivered the same result for a fraction of the cost. Not because AI is bad, but because the problem was not an AI problem.',
         },
         {
           title: 'Start with the basics',
-          text: 'Before investing in AI, ask yourself three questions. Do we know where the most time is lost? Can we explain the problem to a new colleague in 5 minutes? Is there a simpler solution we have not tried yet? In 8 out of 10 cases, the answer to that last question is yes. And that simpler solution costs a fraction of what an AI implementation costs. Sometimes the best technology is no technology.',
+          text: 'Before investing in AI, ask yourself three questions. Do we know where the most time is lost? Can we explain the problem to a new colleague in 5 minutes? Is there a simpler solution we have not tried yet? Often the answer to that last question is yes. And that simpler solution costs a fraction of what an AI implementation costs. Sometimes the best technology is no technology.',
         },
+      ],
+      sources: [
+        { label: 'Eagle Hill Consulting - Workers spend time on low-value, inefficient tasks (2023)', url: 'https://www.eaglehillconsulting.com/news/workers-say-they-regularly-spend-time-on-low-value-inefficient-tasks/' },
+        { label: 'SmartDev - True Cost of Generative AI for SMEs: 5-Year Breakdown', url: 'https://smartdev.com/gen-ai-implementation-cost-sme/' },
       ],
     },
   },
   {
-    key: 'procesverbetering-zonder-lean',
+    key: 'procesverbetering-hoeft-niet-ingewikkeld',
     slugs: {
-      nl: 'procesverbetering-zonder-lean',
-      en: 'process-improvement-without-lean',
+      nl: 'procesverbetering-hoeft-niet-ingewikkeld',
+      en: 'process-improvement-doesnt-have-to-be-complicated',
     },
     author: 'Max Poppes',
     publishedDate: '2026-02-24',
@@ -79,63 +87,71 @@ const blogPosts = [
     category: 'procesverbetering',
     relatedServices: ['werkprocessen'],
     nl: {
-      title: 'Procesverbetering zonder Lean of Six Sigma',
-      excerpt: 'Je hoeft geen certificaat aan de muur te hebben om je processen te verbeteren. Soms is gezond verstand genoeg.',
+      title: 'Procesverbetering hoeft niet ingewikkeld te zijn',
+      excerpt: 'Lean-principes zijn simpel en krachtig. Het probleem is niet het framework, maar het circus eromheen.',
       sections: [
         {
-          title: 'Het probleem met frameworks',
-          text: 'Lean, Six Sigma, Kaizen. Er zijn tientallen methodologieen die beloven je processen te verbeteren. Ik heb Lean zelf geleerd tijdens mijn opleiding, en ik vind het eerlijk gezegd best lightweight. De kernprincipes zijn simpel en praktisch. Maar wat ik in de praktijk zie, is dat bedrijven er iets groots van maken. Er komt een consultant, er worden workshops georganiseerd, er verschijnen value stream maps aan de muur, en voor je het weet is het framework zelf een project geworden. Je hebt geen DMAIC-cyclus nodig om te zien dat je team elke maandag 3 uur kwijt is aan dezelfde handmatige rapportage. En je hebt geen certificaat aan de muur nodig om te concluderen dat een proces van 14 stappen misschien ook in 6 kan. Het probleem is niet Lean zelf. Het probleem is hoe het vaak wordt toegepast: te formeel, te zwaar, en te ver van de werkvloer.',
+          title: 'De kern is simpel',
+          text: 'Lean is in de basis een heel simpel idee, ontwikkeld door Taiichi Ohno bij Toyota tussen 1948 en 1975. Kijk hoe het werk gedaan wordt. Spot wat geen waarde toevoegt. Verbeter het. Meet of het werkt. Herhaal. Dat is het. Later vertaalde Eric Ries dezelfde filosofie naar build-measure-learn in The Lean Startup. De kern is altijd hetzelfde: observeren, verbeteren en itereren. Ik heb Lean zelf geleerd tijdens mijn studie en het is eerlijk gezegd het meest praktische framework dat ik ken. De principes zijn logisch, concreet en direct toepasbaar. Je hoeft er geen boek voor te lezen of een cursus voor te volgen om ermee te beginnen.',
         },
         {
-          title: 'Wat wel werkt',
-          text: 'Loop mee met de mensen die het werk doen. Niet een halfuur, maar een hele dag. Vraag waar ze tijd aan verliezen. Kijk waar informatie blijft hangen. Let op de momenten waarop iemand zegt "zo doen we dat hier nu eenmaal". Dat is meestal het punt waar het misgaat. De beste procesverbeteringen beginnen niet met een framework, maar met een simpele vraag: wat kost jullie elke week de meeste moeite? Het antwoord is bijna altijd verrassend concreet. Niet "communicatie kan beter" maar "ik moet elke dinsdag handmatig cijfers uit drie systemen samenvoegen voor het weekrapport". Dat is een probleem dat je kunt fixen.',
+          title: 'Waar het misgaat',
+          text: 'Het probleem is niet Lean. Het probleem is wat er omheen gebouwd is. Er is een hele industrie ontstaan van certificeringen, consultants en methodologieen die simpele principes ingewikkeld maken. Six Sigma met Green Belts en Black Belts. DMAIC-cycli met uitgebreide statistiche analyses. Verandertrajecten van maanden met stuurgroepen en value stream maps aan de muur. Voor je het weet is het framework zelf een project geworden. Een bedrijf van 50 man heeft geen Black Belt-consultant nodig om te zien dat het team elke maandag 3 uur kwijt is aan dezelfde handmatige rapportage. En je hebt geen certificaat aan de muur nodig om te concluderen dat een proces van 14 stappen misschien ook in 6 kan.',
+        },
+        {
+          title: 'Hoe ik het aanpak',
+          text: 'Mijn aanpak is in de kern Lean, maar dan zonder de overhead. Ik begin altijd op de werkvloer. Meelopen met de mensen die het werk doen. Niet een halfuur, maar een hele dag. Vragen waar ze tijd aan verliezen. Kijken waar informatie blijft hangen. Luisteren naar de momenten waarop iemand zegt "zo doen we dat hier nu eenmaal". Dat is waar de verspilling zit. Vervolgens pak ik het aan: simpelste oplossing eerst, kijken of het werkt, bijsturen waar nodig. Geen projectplan van 40 paginas. Geen stuurgroep. Geen verandertraject. Gewoon fixen, meten en itereren.',
         },
         {
           title: 'Een concreet voorbeeld',
-          text: 'Bij een logistiek bedrijf van 60 man klaagde het planningsteam dat ze elke dag minstens een uur kwijt waren aan "brandjes blussen". Klonk als een communicatieprobleem. Maar na een dag meelopen bleek het iets anders: de chauffeurs kregen hun ritten pas om 7:00 uur \'s ochtends door, terwijl de eerste ritten om 7:30 vertrokken. Elke ochtend hetzelfde verhaal: vragen, wijzigingen, onduidelijkheden. De oplossing was niet een communicatietraining of een Lean-workshop. De oplossing was de ritten de avond ervoor delen. Kostte niks. Scheelde een uur per dag.',
+          text: 'Bij een logistiek bedrijf van 60 man klaagde het planningsteam dat ze elke dag minstens een uur kwijt waren aan "brandjes blussen". Klonk als een communicatieprobleem. Maar na een dag meelopen bleek het iets anders: de chauffeurs kregen hun ritten pas om 7:00 uur \'s ochtends door, terwijl de eerste ritten om 7:30 vertrokken. Elke ochtend hetzelfde verhaal: vragen, wijzigingen, onduidelijkheden. Puur Lean-denken: observeren wat er echt gebeurt, de verspilling identificeren en de simpelste oplossing zoeken. De ritten de avond ervoor delen. Kostte niks. Scheelde een uur per dag. Geen workshop, geen certificering, geen verandertraject.',
         },
         {
-          title: 'De rol van je team',
-          text: 'Procesverbetering werkt alleen als de mensen die het proces uitvoeren erbij betrokken zijn. Niet als klankbord achteraf, maar vanaf het begin. Zij weten precies waar het vastloopt. Ze hebben vaak al ideeen voor oplossingen, maar niemand vraagt ernaar. Dit is geen co-creatie workshop met post-its en een facilitator. Dit is gewoon vragen: "Wat zou jij veranderen als je het voor het zeggen had?" En dan ook echt iets met dat antwoord doen. Dat bouwt vertrouwen en zorgt ervoor dat de verbetering ook blijft hangen.',
+          title: 'Je team weet het al',
+          text: 'De mensen die het werk doen weten precies waar het vastloopt. Ze hebben vaak al ideeen voor oplossingen, maar niemand vraagt ernaar. Dat is ook een Lean-principe: respect voor de mensen op de werkvloer. Niet als klankbord achteraf, maar als vertrekpunt. Vraag ze: "Wat zou jij veranderen als je het voor het zeggen had?" En doe dan ook echt iets met dat antwoord. Dat bouwt vertrouwen en zorgt ervoor dat de verbetering blijft hangen. Procesverbetering die van bovenaf wordt opgelegd werkt zelden. Procesverbetering die begint bij de mensen die het werk doen, werkt bijna altijd.',
         },
         {
-          title: 'Klein beginnen, snel resultaat',
-          text: 'Je hoeft niet het hele bedrijf om te gooien. Pak een proces dat iedereen irriteert, begrijp waarom het irriteert, en verbeter dat ene ding. Geen projectplan van 40 paginas, geen stuurgroep, geen verandertraject. Gewoon fixen. Als dat werkt, pak je het volgende. Zo bouw je momentum zonder weerstand. En je laat zien dat procesverbetering niet iets is dat maanden duurt en veel geld kost. Het is iets dat volgende week al verschil kan maken.',
+          title: 'Wanneer je wel meer structuur nodig hebt',
+          text: 'Soms is een lichtgewicht aanpak niet genoeg. Als je een proces wilt verbeteren dat over meerdere afdelingen loopt, met tientallen stappen en afhankelijkheden, dan heb je meer structuur nodig. Maar zelfs dan hoef je niet het hele certificeringscircus in te huren. Pak de Lean-principes die werken: observeren, verspilling elimineren, itereren, je team betrekken. Voeg structuur toe waar het nodig is en laat de rest weg. Het doel is een beter proces, niet een mooier framework.',
         },
-        {
-          title: 'Wanneer je wel een framework nodig hebt',
-          text: 'Eerlijk is eerlijk: soms is een gestructureerde aanpak wel nodig. Als je een proces wilt verbeteren dat over meerdere afdelingen loopt, met tientallen stappen en afhankelijkheden, dan heb je meer nodig dan gezond verstand. Maar zelfs dan hoef je niet het hele Lean-handboek te volgen. Pak de elementen die nuttig zijn en laat de rest weg. Een framework is een gereedschapskist, geen bijbel.',
-        },
+      ],
+      sources: [
+        { label: 'Wikipedia - Toyota Production System (Taiichi Ohno, 1948-1975)', url: 'https://en.wikipedia.org/wiki/Toyota_Production_System' },
+        { label: 'Eric Ries - The Lean Startup (build-measure-learn)', url: 'https://theleanstartup.com/' },
       ],
     },
     en: {
-      title: 'Process improvement without Lean or Six Sigma',
-      excerpt: 'You do not need a certificate on the wall to improve your processes. Sometimes common sense is enough.',
+      title: 'Process improvement does not have to be complicated',
+      excerpt: 'Lean principles are simple and powerful. The problem is not the framework, but the circus around it.',
       sections: [
         {
-          title: 'The problem with frameworks',
-          text: 'Lean, Six Sigma, Kaizen. There are dozens of methodologies that promise to improve your processes. I learned Lean myself during my studies, and honestly, I think it is pretty lightweight. The core principles are simple and practical. But what I see in practice is that companies turn it into something big. A consultant comes in, workshops are organized, value stream maps appear on the wall, and before you know it the framework itself has become a project. You do not need a DMAIC cycle to see that your team spends 3 hours every Monday on the same manual report. And you do not need a certificate on the wall to conclude that a 14-step process could probably be done in 6. The problem is not Lean itself. The problem is how it is often applied: too formal, too heavy, and too far from the work floor.',
+          title: 'The core is simple',
+          text: 'Lean is fundamentally a very simple idea, developed by Taiichi Ohno at Toyota between 1948 and 1975. Look at how the work gets done. Spot what does not add value. Improve it. Measure whether it works. Repeat. That is it. Later, Eric Ries translated the same philosophy into build-measure-learn in The Lean Startup. The core is always the same: observe, improve, and iterate. I learned Lean during my studies and honestly, it is the most practical framework I know. The principles are logical, concrete, and immediately applicable. You do not need to read a book or take a course to start using them.',
         },
         {
-          title: 'What actually works',
-          text: 'Walk alongside the people who do the work. Not for half an hour, but for a full day. Ask what wastes their time. See where information gets stuck. Pay attention to the moments when someone says "that is just how we do things here". That is usually where things go wrong. The best process improvements do not start with a framework, but with a simple question: what costs you the most effort every week? The answer is almost always surprisingly concrete. Not "communication could be better" but "every Tuesday I have to manually compile numbers from three systems for the weekly report". That is a problem you can fix.',
+          title: 'Where it goes wrong',
+          text: 'The problem is not Lean. The problem is what has been built around it. An entire industry has emerged of certifications, consultants, and methodologies that make simple principles complicated. Six Sigma with Green Belts and Black Belts. DMAIC cycles with extensive statistical analyses. Change programs lasting months with steering committees and value stream maps on the wall. Before you know it, the framework itself has become a project. A company of 50 people does not need a Black Belt consultant to see that the team spends 3 hours every Monday on the same manual report. And you do not need a certificate on the wall to conclude that a 14-step process could probably be done in 6.',
+        },
+        {
+          title: 'How I approach it',
+          text: 'My approach is Lean at its core, but without the overhead. I always start on the work floor. Walking alongside the people who do the work. Not for half an hour, but for a full day. Asking where they lose time. Watching where information gets stuck. Listening for the moments when someone says "that is just how we do things here". That is where the waste is. Then I fix it: simplest solution first, check if it works, adjust where needed. No 40-page project plan. No steering committee. No change program. Just fix, measure, and iterate.',
         },
         {
           title: 'A concrete example',
-          text: 'At a logistics company of 60 people, the planning team complained they spent at least an hour every day "putting out fires". Sounded like a communication problem. But after spending a day with them, it turned out to be something else: drivers only received their routes at 7:00 AM, while the first routes departed at 7:30. Every morning the same story: questions, changes, confusion. The solution was not a communication training or a Lean workshop. The solution was sharing routes the evening before. Cost nothing. Saved an hour every day.',
+          text: 'At a logistics company of 60 people, the planning team complained they spent at least an hour every day "putting out fires". Sounded like a communication problem. But after spending a day with them, it turned out to be something else: drivers only received their routes at 7:00 AM, while the first routes departed at 7:30. Every morning the same story: questions, changes, confusion. Pure Lean thinking: observe what actually happens, identify the waste, and find the simplest solution. Share routes the evening before. Cost nothing. Saved an hour every day. No workshop, no certification, no change program.',
         },
         {
-          title: 'The role of your team',
-          text: 'Process improvement only works when the people who execute the process are involved. Not as a sounding board after the fact, but from the start. They know exactly where things get stuck. They often already have ideas for solutions, but nobody asks. This is not a co-creation workshop with sticky notes and a facilitator. This is simply asking: "What would you change if it were up to you?" And then actually doing something with that answer. That builds trust and makes sure the improvement actually sticks.',
+          title: 'Your team already knows',
+          text: 'The people who do the work know exactly where things get stuck. They often already have ideas for solutions, but nobody asks. That is also a Lean principle: respect for the people on the work floor. Not as a sounding board after the fact, but as a starting point. Ask them: "What would you change if it were up to you?" And then actually do something with that answer. That builds trust and makes sure the improvement sticks. Process improvement imposed from the top rarely works. Process improvement that starts with the people who do the work almost always does.',
         },
         {
-          title: 'Start small, see results fast',
-          text: 'You do not have to overhaul the entire company. Pick one process that annoys everyone, understand why it annoys them, and fix that one thing. No 40-page project plan, no steering committee, no change program. Just fix it. When that works, pick the next one. That is how you build momentum without resistance. And you show that process improvement is not something that takes months and costs a fortune. It is something that can make a difference next week.',
+          title: 'When you do need more structure',
+          text: 'Sometimes a lightweight approach is not enough. If you want to improve a process that spans multiple departments, with dozens of steps and dependencies, you need more structure. But even then, you do not need to bring in the full certification circus. Take the Lean principles that work: observe, eliminate waste, iterate, involve your team. Add structure where it is needed and leave the rest. The goal is a better process, not a prettier framework.',
         },
-        {
-          title: 'When you do need a framework',
-          text: 'To be fair: sometimes a structured approach is necessary. If you want to improve a process that spans multiple departments, with dozens of steps and dependencies, you need more than common sense. But even then, you do not have to follow the entire Lean handbook. Take the elements that are useful and leave the rest. A framework is a toolbox, not a bible.',
-        },
+      ],
+      sources: [
+        { label: 'Wikipedia - Toyota Production System (Taiichi Ohno, 1948-1975)', url: 'https://en.wikipedia.org/wiki/Toyota_Production_System' },
+        { label: 'Eric Ries - The Lean Startup (build-measure-learn)', url: 'https://theleanstartup.com/' },
       ],
     },
   },
@@ -180,12 +196,16 @@ const blogPosts = [
         },
         {
           title: 'De verborgen kosten',
-          text: 'Het lastige aan slechte processen is dat je de kosten niet op een factuur ziet. Het zijn de 15 minuten per persoon per dag die opgeteld weken per jaar worden. Bij een team van 30 mensen is 15 minuten per dag bijna 200 werkdagen per jaar aan verloren productiviteit. Dat is een fulltime medewerker. Het is ook de medewerker die vertrekt omdat het werk onnodig frustrerend is. De klant die niet terugkomt omdat de communicatie rommelig was. Het vertrouwen dat afbrokkelt omdat niemand zeker weet of de cijfers kloppen. Die kosten zijn er elke dag, maar niemand telt ze op.',
+          text: 'Het lastige aan slechte processen is dat je de kosten niet op een factuur ziet. Onderzoek van The CFO laat zien dat inefficiente processen 20 tot 30% productiviteitsverlies veroorzaken. Het zijn de 15 minuten per persoon per dag die opgeteld weken per jaar worden. Bij een team van 30 mensen is 15 minuten per dag bijna 200 werkdagen per jaar aan verloren productiviteit. Dat is een fulltime medewerker. Het is ook de medewerker die vertrekt omdat het werk onnodig frustrerend is. Volgens Devlin Peck vertrekt 20% van nieuwe medewerkers binnen 45 dagen bij een slechte onboarding. De klant die niet terugkomt omdat de communicatie rommelig was. Die kosten zijn er elke dag, maar niemand telt ze op.',
         },
         {
           title: 'Wat je eraan kunt doen',
           text: 'Herken je drie of meer van deze signalen? Dan is je proces toe aan een revisie. Niet een grote reorganisatie, maar een nuchter gesprek over wat beter kan. Begin met de mensen die het werk doen. Zij weten precies waar het vastloopt. De eerste stap is simpel: loop een dag mee met je team en noteer elk moment waarop iemand iets doet dat onnodig complex, dubbel of frustrerend is. De oplossing is vaak simpeler dan je denkt.',
         },
+      ],
+      sources: [
+        { label: 'The CFO - How inefficient processes waste nearly a third of employees\' time (2019)', url: 'https://the-cfo.io/2019/06/19/how-inefficient-processes-waste-nearly-a-third-of-employees-time/' },
+        { label: 'Devlin Peck - Employee Onboarding Statistics (2025)', url: 'https://www.devlinpeck.com/content/employee-onboarding-statistics' },
       ],
     },
     en: {
@@ -218,12 +238,16 @@ const blogPosts = [
         },
         {
           title: 'The hidden costs',
-          text: 'The tricky thing about bad processes is that you do not see the costs on an invoice. It is the 15 minutes per person per day that add up to weeks per year. In a team of 30 people, 15 minutes per day amounts to almost 200 working days per year of lost productivity. That is a full-time employee. It is also the employee who leaves because the work is unnecessarily frustrating. The client who does not come back because communication was messy. The trust that erodes because nobody is sure the numbers are right. Those costs are there every day, but nobody adds them up.',
+          text: 'The tricky thing about bad processes is that you do not see the costs on an invoice. Research from The CFO shows that inefficient processes cause 20 to 30% productivity loss. It is the 15 minutes per person per day that add up to weeks per year. In a team of 30 people, 15 minutes per day amounts to almost 200 working days per year of lost productivity. That is a full-time employee. It is also the employee who leaves because the work is unnecessarily frustrating. According to Devlin Peck, 20% of new employees leave within 45 days when onboarding is poor. The client who does not come back because communication was messy. Those costs are there every day, but nobody adds them up.',
         },
         {
           title: 'What you can do about it',
           text: 'Do you recognize three or more of these signs? Then your process needs a revision. Not a big reorganization, but an honest conversation about what can be better. Start with the people who do the work. They know exactly where things get stuck. The first step is simple: spend a day with your team and note every moment someone does something unnecessarily complex, redundant, or frustrating. The solution is often simpler than you think.',
         },
+      ],
+      sources: [
+        { label: 'The CFO - How inefficient processes waste nearly a third of employees\' time (2019)', url: 'https://the-cfo.io/2019/06/19/how-inefficient-processes-waste-nearly-a-third-of-employees-time/' },
+        { label: 'Devlin Peck - Employee Onboarding Statistics (2025)', url: 'https://www.devlinpeck.com/content/employee-onboarding-statistics' },
       ],
     },
   },
@@ -244,11 +268,11 @@ const blogPosts = [
       sections: [
         {
           title: 'De oplossing voor de oplossing',
-          text: 'Het patroon is herkenbaar. Een bedrijf koopt software. De implementatie duurt langer dan gepland. Het team werkt er half mee, half omheen. Na een jaar staat het systeem er, maar werkt niemand zoals bedoeld. Na twee jaar gebruikt de helft van het team weer Excel ernaast. Het probleem? Niemand heeft eerst gevraagd welk probleem we eigenlijk oplossen. De software werd gekozen op basis van features, niet op basis van het werkproces. De demo zag er goed uit. De salesrep was overtuigend. Maar niemand heeft gekeken of de software past bij hoe het team echt werkt.',
+          text: 'Het patroon is herkenbaar. Een bedrijf koopt software. De implementatie duurt langer dan gepland. Het team werkt er half mee, half omheen. Na een jaar staat het systeem er, maar werkt niemand zoals bedoeld. Na twee jaar gebruikt de helft van het team weer Excel ernaast. Dat is geen uitzondering: volgens McKinsey mislukt 70% van alle digitale transformaties. Het probleem? Niemand heeft eerst gevraagd welk probleem we eigenlijk oplossen. De software werd gekozen op basis van features, niet op basis van het werkproces. De demo zag er goed uit. De salesrep was overtuigend. Maar niemand heeft gekeken of de software past bij hoe het team echt werkt.',
         },
         {
           title: 'Het patroon dat steeds terugkomt',
-          text: 'Bij bijna elk mislukt digitaliseringstraject zien we hetzelfde patroon. Er is een vaag gevoel dat "het beter moet". Iemand zoekt een tool die dat oplost. De tool wordt gekozen op basis van features en demos. De implementatie is lastiger dan verwacht. Het team past zich aan de tool aan in plaats van andersom. Na een jaar werkt niemand zoals bedoeld. Het probleem zit in het begin. "Het moet beter" is geen goede start. Wat precies moet beter? Voor wie? Waarom gaat het nu fout? Zonder die antwoorden kies je blind.',
+          text: 'Bij bijna elk mislukt digitaliseringstraject zien we hetzelfde patroon. Het Standish Group CHAOS Report bevestigt dit: 66% van alle IT-projecten eindigt in gedeeltelijk of volledig falen. Er is een vaag gevoel dat "het beter moet". Iemand zoekt een tool die dat oplost. De tool wordt gekozen op basis van features en demos. De implementatie is lastiger dan verwacht. Het team past zich aan de tool aan in plaats van andersom. Na een jaar werkt niemand zoals bedoeld. Het probleem zit in het begin. "Het moet beter" is geen goede start. Wat precies moet beter? Voor wie? Waarom gaat het nu fout? Zonder die antwoorden kies je blind.',
         },
         {
           title: 'Technologie is niet het startpunt',
@@ -267,6 +291,10 @@ const blogPosts = [
           text: 'Niet elke digitalisering mislukt. Software is wel de juiste keuze als je precies weet welk probleem je oplost, als het team betrokken is bij de keuze, en als je bereid bent het werkproces aan te passen waar dat logisch is. De sleutel is: kies software op basis van je proces, niet andersom. En begin met een pilot. Niet met een bedrijfsbrede uitrol op dag een.',
         },
       ],
+      sources: [
+        { label: 'McKinsey - Why do most transformations fail?', url: 'https://www.mckinsey.com/capabilities/transformation/our-insights/common-pitfalls-in-transformations-a-conversation-with-jon-garcia' },
+        { label: 'Standish Group - CHAOS Report on IT Project Outcomes', url: 'https://opencommons.org/CHAOS_Report_on_IT_Project_Outcomes' },
+      ],
     },
     en: {
       title: 'Why digitalization fails at SME businesses',
@@ -274,11 +302,11 @@ const blogPosts = [
       sections: [
         {
           title: 'The solution before the problem',
-          text: 'The pattern is familiar. A company buys software. Implementation takes longer than planned. The team half uses it, half works around it. After a year, the system is there, but nobody works as intended. After two years, half the team is back to using Excel on the side. The problem? Nobody first asked which problem we are actually solving. The software was chosen based on features, not on the work process. The demo looked great. The sales rep was convincing. But nobody checked whether the software fits how the team actually works.',
+          text: 'The pattern is familiar. A company buys software. Implementation takes longer than planned. The team half uses it, half works around it. After a year, the system is there, but nobody works as intended. After two years, half the team is back to using Excel on the side. This is not an exception: according to McKinsey, 70% of all digital transformations fail. The problem? Nobody first asked which problem we are actually solving. The software was chosen based on features, not on the work process. The demo looked great. The sales rep was convincing. But nobody checked whether the software fits how the team actually works.',
         },
         {
           title: 'The pattern that keeps repeating',
-          text: 'In almost every failed digitalization effort, we see the same pattern. There is a vague feeling that "things need to be better". Someone looks for a tool to fix it. The tool is chosen based on features and demos. Implementation is harder than expected. The team adapts to the tool instead of the other way around. After a year, nobody works as intended. The problem is at the start. "It needs to be better" is not a good starting point. What exactly needs to be better? For whom? Why is it going wrong now? Without those answers, you are choosing blindly.',
+          text: 'In almost every failed digitalization effort, we see the same pattern. The Standish Group CHAOS Report confirms this: 66% of all IT projects end in partial or complete failure. There is a vague feeling that "things need to be better". Someone looks for a tool to fix it. The tool is chosen based on features and demos. Implementation is harder than expected. The team adapts to the tool instead of the other way around. After a year, nobody works as intended. The problem is at the start. "It needs to be better" is not a good starting point. What exactly needs to be better? For whom? Why is it going wrong now? Without those answers, you are choosing blindly.',
         },
         {
           title: 'Technology is not the starting point',
@@ -296,6 +324,10 @@ const blogPosts = [
           title: 'When software is the right choice',
           text: 'Not every digitalization fails. Software is the right choice when you know exactly which problem you are solving, when the team is involved in the selection, and when you are willing to adjust the work process where it makes sense. The key is: choose software based on your process, not the other way around. And start with a pilot. Not with a company-wide rollout on day one.',
         },
+      ],
+      sources: [
+        { label: 'McKinsey - Why do most transformations fail?', url: 'https://www.mckinsey.com/capabilities/transformation/our-insights/common-pitfalls-in-transformations-a-conversation-with-jon-garcia' },
+        { label: 'Standish Group - CHAOS Report on IT Project Outcomes', url: 'https://opencommons.org/CHAOS_Report_on_IT_Project_Outcomes' },
       ],
     },
   },

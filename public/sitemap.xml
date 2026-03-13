@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Homepage -->
   <url>
     <loc>https://gearshyft.nl/</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en" />
+    <image:image>
+      <image:loc>https://gearshyft.nl/favicon.svg</image:loc>
+      <image:title>GearShyft logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://gearshyft.nl/og-image.png</image:loc>
+      <image:title>GearShyft - Procesverbetering en operationele optimalisatie</image:title>
+    </image:image>
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,6 +23,14 @@
     <loc>https://gearshyft.nl/en</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en" />
+    <image:image>
+      <image:loc>https://gearshyft.nl/favicon.svg</image:loc>
+      <image:title>GearShyft logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://gearshyft.nl/og-image.png</image:loc>
+      <image:title>GearShyft - Process improvement and operational optimization</image:title>
+    </image:image>
     <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -24,6 +41,10 @@
     <loc>https://gearshyft.nl/over</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/over" />
     <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/about" />
+    <image:image>
+      <image:loc>https://gearshyft.nl/images/max-poppes.webp</image:loc>
+      <image:title>Max Poppes - Oprichter GearShyft</image:title>
+    </image:image>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -32,6 +53,10 @@
     <loc>https://gearshyft.nl/en/about</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/over" />
     <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/about" />
+    <image:image>
+      <image:loc>https://gearshyft.nl/images/max-poppes.webp</image:loc>
+      <image:title>Max Poppes - Founder of GearShyft</image:title>
+    </image:image>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -217,19 +242,19 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog: Procesverbetering zonder Lean of Six Sigma -->
+  <!-- Blog: Procesverbetering hoeft niet ingewikkeld te zijn -->
   <url>
-    <loc>https://gearshyft.nl/blog/procesverbetering-zonder-lean</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/blog/procesverbetering-zonder-lean" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/blog/process-improvement-without-lean" />
+    <loc>https://gearshyft.nl/blog/procesverbetering-hoeft-niet-ingewikkeld</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/blog/procesverbetering-hoeft-niet-ingewikkeld" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/blog/process-improvement-doesnt-have-to-be-complicated" />
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gearshyft.nl/en/blog/process-improvement-without-lean</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/blog/procesverbetering-zonder-lean" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/blog/process-improvement-without-lean" />
+    <loc>https://gearshyft.nl/en/blog/process-improvement-doesnt-have-to-be-complicated</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://gearshyft.nl/blog/procesverbetering-hoeft-niet-ingewikkeld" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://gearshyft.nl/en/blog/process-improvement-doesnt-have-to-be-complicated" />
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

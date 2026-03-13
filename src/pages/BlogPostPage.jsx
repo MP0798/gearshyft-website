@@ -207,6 +207,32 @@ const BlogPostPage = () => {
         })}
       </div>
 
+      {/* Sources */}
+      {post.sources?.length > 0 && (
+        <section className="bg-cream py-16 px-6 md:px-16 lg:px-24 border-t border-charcoal/10">
+          <div className="max-w-5xl mx-auto">
+            <span className="block font-mono text-xs tracking-widest uppercase text-clay mb-6">
+              {lang === 'nl' ? 'Bronnen' : 'Sources'}
+            </span>
+            <ul className="space-y-3">
+              {post.sources.map((source, i) => (
+                <li key={i} className="font-mono text-sm text-charcoal/60">
+                  <span className="text-charcoal/30 mr-3">[{i + 1}]</span>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-clay transition-colors duration-300 underline underline-offset-4 decoration-charcoal/20 hover:decoration-clay"
+                  >
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* Related Services */}
       {post.relatedServices?.length > 0 && (
         <section className="bg-cream py-20 px-6 md:px-16 lg:px-24">

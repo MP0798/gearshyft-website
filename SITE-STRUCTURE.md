@@ -54,7 +54,7 @@ gearshyft.nl/
 ├── ... (alles uit Phase 1)
 ├── /blog                          ← Blog index
 │   ├── /ai-nodig-of-beter-proces  ← First blog post
-│   ├── /procesverbetering-zonder-lean
+│   ├── /procesverbetering-hoeft-niet-ingewikkeld
 │   ├── /signalen-proces-verbeteren
 │   └── /digitalisering-mislukt-mkb
 ├── /cases                         ← Case studies index
