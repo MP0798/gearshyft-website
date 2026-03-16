@@ -120,8 +120,11 @@ const AboutMax = () => {
           <span className="font-mono text-xs tracking-widest uppercase text-clay block mb-6">{t.aboutMaxLabel}</span>
           <h2 className="font-sans font-bold text-4xl md:text-5xl text-cream mb-2">{t.aboutMaxName}</h2>
           <p className="font-mono text-sm text-cream/50 mb-8">{t.aboutMaxRole}</p>
-          <p className="font-mono text-sm text-cream/60 leading-relaxed mb-8">
+          <p className="font-mono text-sm text-cream/60 leading-relaxed mb-6">
             {t.aboutMaxBio}
+          </p>
+          <p className="font-mono text-sm text-cream/60 leading-relaxed mb-8">
+            {t.aboutMaxBio2}
           </p>
           <blockquote className="border-l-2 border-clay pl-6 mb-8">
             <p className="font-serif italic text-2xl md:text-3xl text-cream leading-snug">
@@ -275,9 +278,14 @@ const OverPage = () => {
       image: 'https://gearshyft.nl/images/max-poppes.webp',
       knowsAbout: [
         'Process Improvement',
+        'Process Automation',
         'Business Operations',
         'Digital Transformation',
         'Data Management',
+        'Robotic Process Automation (RPA)',
+        'AI Implementation',
+        'SaaS',
+        'Machine Learning',
       ],
     };
 

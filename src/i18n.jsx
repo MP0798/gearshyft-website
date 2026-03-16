@@ -227,8 +227,9 @@ const translations = {
     aboutMaxName: 'Max Poppes',
     aboutMaxRole: 'Founder',
     aboutMaxBio: 'Background in entrepreneurship, always drawn to technology and making things simpler. Experience across SaaS, data, and energy. In every role, the same thing stood out: there was always room for a more efficient way. That\'s what I dig into.',
+    aboutMaxBio2: 'My interest in automation started early. Over ten years ago, as a high school student, I gave a presentation with Pepper, the humanoid robot. After that I worked at Pegamento, the largest RPA implementation partner in the Netherlands, where my father built the company around process automation and AI. Later I sold a SaaS platform that used machine learning to match companies with talent. That combination of understanding processes and applying technology smartly, it\'s just in my DNA.',
     aboutMaxQuote: 'I\'d rather build something smart than do the same thing every day.',
-    aboutMaxOrigin: 'After finishing my studies and several internships, the same thing kept coming back: improving or building solutions. No more doubt, that became GearShyft.',
+    aboutMaxOrigin: 'After my studies and several internships, the same pattern kept emerging: improving processes, building tools, helping teams work with technology instead of around it. No more doubt, that became GearShyft.',
 
     // What GearShyft is (and isn't)
     aboutIdentityTitle: 'What GearShyft is',
@@ -546,8 +547,9 @@ const translations = {
     aboutMaxName: 'Max Poppes',
     aboutMaxRole: 'Oprichter',
     aboutMaxBio: 'Opleiding in ondernemerschap, altijd geinteresseerd in techniek en het leven simpeler maken. Ervaring in SaaS, data en energie. Bij elke ervaring viel hetzelfde op: er kon altijd een efficientieslag gemaakt worden. Dat is waar ik me in vastbijt.',
+    aboutMaxBio2: 'Mijn interesse in automatisering begon al vroeg. Meer dan tien jaar geleden stond ik als scholier een presentatie te geven met Pepper, de humanoïde robot. Daarna werkte ik bij Pegamento, de grootste RPA-implementatiepartner van Nederland, waar mijn vader het bedrijf opbouwde rond procesautomatisering en AI. Later verkocht ik een SaaS-platform dat machine learning gebruikte om bedrijven en talent te matchen. Die combinatie van processen begrijpen en technologie slim inzetten, dat zit er gewoon in.',
     aboutMaxQuote: 'Ik bouw liever iets slims dan dat ik elke dag hetzelfde doe.',
-    aboutMaxOrigin: 'Na mijn studie en meerdere stages kwam steeds hetzelfde terug: het verbeteren of bouwen van oplossingen. Geen twijfel meer, dat werd GearShyft.',
+    aboutMaxOrigin: 'Na mijn studie en meerdere stages kwam steeds hetzelfde terug: processen verbeteren, tools bouwen, teams laten werken met technologie in plaats van eromheen. Geen twijfel meer, dat werd GearShyft.',
 
     // What GearShyft is (and isn't)
     aboutIdentityTitle: 'Wat GearShyft is',
